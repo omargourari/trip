@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Travel Timeline</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+    .bar {
+      fill: #6a4c93;
+      cursor: pointer;
+    }
+    .ideal {
+      fill: #8ac926;
+      opacity: 0.7;
+    }
+    .maxstay {
+      fill: none;
+      stroke: #ffca3a;
+      stroke-width: 2;
+    }
+    .axis text {
+      font-size: 12px;
+    }
+    .label {
+      fill: black;
+      font-size: 12px;
+      alignment-baseline: middle;
+    }
+    .legend {
+      font-size: 14px;
+    }
+    .legend rect {
+      stroke: black;
+      stroke-width: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-size: 1.5rem;">Interactive Travel Timeline by Country and Climate</h1>
+  <svg id="timeline" width="1500" height="2000"></svg>
+  <script>
+    const countries = [
+      { name: "Greece", startMonth: 5, duration: 1, ideal: [4,5,6,9], maxStay: 3 },
+      { name: "Turkey", startMonth: 6, duration: 1, ideal: [5,6,9,10], maxStay: 3 },
+      { name: "Georgia", startMonth: 7, duration: 1, ideal: [6,7,8], maxStay: 12 },
+      { name: "Armenia", startMonth: 8, duration: 1, ideal: [6,7,8,9], maxStay: 6 },
+      { name: "Azerbaijan", startMonth: 8, duration: 1, ideal: [5,6,9], maxStay: 1 },
+      { name: "Iran", startMonth: 9, duration: 1, ideal: [3,4,10], maxStay: 1 },
+      { name: "Turkmenistan", startMonth: 10, duration: 1, ideal: [4,5,10], maxStay: 1 },
+      { name: "Kazakhstan", startMonth: 10, duration: 1, ideal: [5,6,9], maxStay: 1 },
+      { name: "Tajikistan", startMonth: 10, duration: 1, ideal: [5,6,9], maxStay: 1 },
+      { name: "Kyrgyzstan", startMonth: 10, duration: 1, ideal: [6,7,8], maxStay: 1 },
+      { name: "South Korea", startMonth: 4, duration: 1, ideal: [4,5,10], maxStay: 3 },
+      { name: "Japan", startMonth: 5, duration: 1, ideal: [4,5,10,11], maxStay: 3 },
+      { name: "Pakistan", startMonth: 10, duration: 1, ideal: [3,4,10], maxStay: 1 },
+      { name: "Sri Lanka", startMonth: 12, duration: 1, ideal: [1,2,3], maxStay: 1 },
+      { name: "Bangladesh", startMonth: 11, duration: 1, ideal: [11,12,1], maxStay: 1 },
+      { name: "Myanmar", startMonth: 12, duration: 1, ideal: [11,12,1,2], maxStay: 1 },
+      { name: "Laos", startMonth: 2, duration: 1, ideal: [1,2,3], maxStay: 1 },
+      { name: "Malaysia", startMonth: 2, duration: 1, ideal: [2,3,7], maxStay: 3 },
+      { name: "Philippines", startMonth: 3, duration: 1, ideal: [1,2,3], maxStay: 1 },
+      { name: "Taiwan", startMonth: 3, duration: 1, ideal: [3,4,10], maxStay: 3 },
+      { name: "Indonesia", startMonth: 4, duration: 1, ideal: [5,6,7], maxStay: 2 },
+      { name: "China", startMonth: 4, duration: 1, ideal: [4,5,9,10], maxStay: 1 },
+      { name: "Mongolia", startMonth: 5, duration: 1, ideal: [6,7,8], maxStay: 1 },
+      { name: "Russia", startMonth: 5, duration: 1, ideal: [6,7,8], maxStay: 1 },
+      { name: "Alaska", startMonth: 6, duration: 1, ideal: [6,7,8], maxStay: 3 },
+      { name: "Canada", startMonth: 6, duration: 1, ideal: [6,7,8], maxStay: 6 },
+      { name: "Mexico", startMonth: 7, duration: 1, ideal: [11,12,1], maxStay: 6 },
+      { name: "Nicaragua", startMonth: 8, duration: 1, ideal: [12,1,2], maxStay: 3 },
+      { name: "Cuba", startMonth: 8, duration: 1, ideal: [12,1,2], maxStay: 1 },
+      { name: "Costa Rica", startMonth: 8, duration: 1, ideal: [1,2,12], maxStay: 3 },
+      { name: "Colombia", startMonth: 9, duration: 1, ideal: [12,1,2], maxStay: 3 },
+      { name: "Venezuela", startMonth: 9, duration: 1, ideal: [12,1,2], maxStay: 3 },
+      { name: "Ecuador", startMonth: 9, duration: 1, ideal: [6,7,8], maxStay: 3 },
+      { name: "Peru", startMonth: 10, duration: 1, ideal: [5,6,9], maxStay: 6 },
+      { name: "Chile", startMonth: 11, duration: 1, ideal: [11,12,1,2], maxStay: 3 },
+      { name: "Bolivia", startMonth: 11, duration: 1, ideal: [5,6,9], maxStay: 3 },
+      { name: "Argentina", startMonth: 11, duration: 1, ideal: [11,12,1,2], maxStay: 3 },
+      { name: "Paraguay", startMonth: 11, duration: 1, ideal: [4,5,9], maxStay: 3 },
+      { name: "Uruguay", startMonth: 11, duration: 1, ideal: [3,4,11], maxStay: 3 },
+      { name: "Brazil", startMonth: 11, duration: 1, ideal: [6,7,8], maxStay: 3 }
+    ];
+
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const svg = d3.select("#timeline");
+    const width = +svg.attr("width");
+    const height = +svg.attr("height");
+    const rowHeight = 30;
+    const barHeight = 20;
+    const padding = 150;
+
+    const x = d3.scaleLinear()
+      .domain([0, 12])
+      .range([padding, width - 150]);
+
+    svg.selectAll(".month-label")
+      .data(countries)
+      .enter()
+      .append("text")
+      .attr("class", "label")
+      .attr("x", 10)
+      .attr("y", (d, i) => padding + i * rowHeight + barHeight / 2 - 50)
+      .text(d => d.name);
+
+    svg.selectAll(".ideal")
+      .data(countries.flatMap((c, i) => c.ideal.map(m => ({ country: c.name, month: m, index: i }))))
+      .enter()
+      .append("rect")
+      .attr("class", "ideal")
+      .attr("x", d => x((d.month + 12 - 5) % 12))
+      .attr("y", d => padding + d.index * rowHeight - 50)
+      .attr("width", x(1) - x(0))
+      .attr("height", barHeight);
+
+    svg.selectAll(".maxstay")
+      .data(countries)
+      .enter()
+      .append("rect")
+      .attr("class", "maxstay")
+      .attr("x", d => x((d.startMonth + 12 - 5) % 12))
+      .attr("y", (d, i) => padding + i * rowHeight - 50)
+      .attr("width", d => Math.min(x(d.maxStay), width - 150) - x(0))
+      .attr("height", barHeight);
+
+    svg.selectAll(".bar")
+      .data(countries)
+      .enter()
+      .append("rect")
+      .attr("class", "bar")
+      .attr("x", d => x((d.startMonth + 12 - 5) % 12))
+      .attr("y", (d, i) => padding + i * rowHeight - 50)
+      .attr("width", d => x(d.duration) - x(0))
+      .attr("height", barHeight)
+      .call(d3.drag()
+        .on("drag", function (event, d) {
+          let newStart = Math.max(0, Math.min(11, Math.round(x.invert(event.x) - 0.5)));
+          d.startMonth = (newStart + 5) % 12 || 12;
+          d3.select(this).attr("x", x(newStart));
+        })
+      );
+
+    svg.append("g")
+      .attr("transform", `translate(0,${padding - 60})`)
+      .call(d3.axisTop(x).ticks(12).tickFormat(i => monthNames[(i + 5) % 12]));
+
+    svg.append("rect")
+      .attr("x", 20)
+      .attr("y", height - 90)
+      .attr("width", 20)
+      .attr("height", 20)
+      .attr("fill", "#8ac926");
+
+    svg.append("text")
+      .attr("x", 50)
+      .attr("y", height - 75)
+      .attr("class", "legend")
+      .text("Ideal months (best climate)");
+
+    svg.append("rect")
+      .attr("x", 20)
+      .attr("y", height - 60)
+      .attr("width", 20)
+      .attr("height", 20)
+      .attr("fill", "none")
+      .attr("stroke", "#ffca3a")
+      .attr("stroke-width", 2);
+
+    svg.append("text")
+      .attr("x", 50)
+      .attr("y", height - 45)
+      .attr("class", "legend")
+      .text("Max allowed stay");
+
+    svg.append("rect")
+      .attr("x", 220)
+      .attr("y", height - 60)
+      .attr("width", 20)
+      .attr("height", 20)
+      .attr("fill", "#6a4c93");
+
+    svg.append("text")
+      .attr("x", 250)
+      .attr("y", height - 45)
+      .attr("class", "legend")
+      .text("Planned stay");
+  </script>
+</body>
+</html>
