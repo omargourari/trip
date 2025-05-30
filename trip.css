@@ -1,0 +1,57 @@
+:root {
+  --bg: #f5f7fa;
+  --text: #1a1a1a;
+  --climate: #6fcf97;
+  --entry: #9b5de5;
+  --maxborder: #f9c74f;
+  --rowHeight: 40px;
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+#container {
+  padding: 32px;
+  overflow-x: auto;
+}
+.axis line,
+.axis path {
+  stroke: #b0b6be;
+}
+.country-label {
+  text-anchor: end;
+  dominant-baseline: middle;
+  font-size: 14px;
+  fill: var(--text);
+}
+.week-grid line {
+  stroke: #ecebeb;
+  stroke-width: 1;
+}
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+}
+.handle {
+  cursor: ew-resize;
+}
+.entry-rect {
+  fill: var(--entry);
+  cursor: move;
+}
+.climate-rect {
+  fill: var(--climate);
+}
+.maxstay-rect {
+  fill: none;
+  stroke: var(--maxborder);
+  stroke-dasharray: 4 3;
+}
