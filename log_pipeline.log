@@ -1,0 +1,508 @@
+2025-06-10T09:00:33.4823671Z ##[section]Starting: Setup Python, Poetry and App Package_Deploy_AZU382ITN18001
+2025-06-10T09:00:33.6869334Z ##[section]Starting: Initialize job
+2025-06-10T09:00:33.6872043Z Agent name: 'AZU382ITN18001'
+2025-06-10T09:00:33.6872472Z Agent machine name: 'AZU382ITN18001'
+2025-06-10T09:00:33.6872692Z Current agent version: '4.252.0'
+2025-06-10T09:00:33.7803925Z Agent running as: 'ogourari'
+2025-06-10T09:00:33.7845765Z Prepare build directory.
+2025-06-10T09:00:33.8159658Z Set build variables.
+2025-06-10T09:00:33.8177091Z Download all required tasks.
+2025-06-10T09:00:33.8891634Z Checking job knob settings.
+2025-06-10T09:00:33.8894378Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2025-06-10T09:00:33.8895719Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2025-06-10T09:00:33.8897520Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2025-06-10T09:00:33.8898415Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2025-06-10T09:00:33.8900721Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2025-06-10T09:00:33.8901411Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2025-06-10T09:00:33.8901883Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2025-06-10T09:00:33.8902345Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2025-06-10T09:00:33.8902849Z    Knob: UseNewNodeHandlerTelemetry = True Source: $(DistributedTask.Agent.USENEWNODEHANDLERTELEMETRY) 
+2025-06-10T09:00:33.8903356Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2025-06-10T09:00:33.8904064Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2025-06-10T09:00:33.8904577Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2025-06-10T09:00:33.8905290Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2025-06-10T09:00:33.8905733Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2025-06-10T09:00:33.8906314Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2025-06-10T09:00:33.8906978Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = False Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2025-06-10T09:00:33.8907618Z    Knob: UseNode20ToStartContainer = True Source: $(DistributedTask.Agent.UseNode20ToStartContainer) 
+2025-06-10T09:00:33.8908293Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2025-06-10T09:00:33.8908799Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2025-06-10T09:00:33.8909370Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2025-06-10T09:00:33.8910424Z    Knob: AddForceCredentialsToGitCheckout = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckout) 
+2025-06-10T09:00:33.8911169Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2025-06-10T09:00:33.8911431Z Finished checking job knob settings.
+2025-06-10T09:00:33.9206990Z Start tracking orphan processes.
+2025-06-10T09:00:33.9417090Z ##[section]Finishing: Initialize job
+2025-06-10T09:00:33.9495901Z ##[section]Async Command Start: DetectDockerContainer
+2025-06-10T09:00:33.9496506Z ##[section]Async Command End: DetectDockerContainer
+2025-06-10T09:00:33.9498165Z ##[section]Async Command Start: DetectDockerContainer
+2025-06-10T09:00:33.9498498Z ##[section]Async Command End: DetectDockerContainer
+2025-06-10T09:00:33.9671929Z ##[section]Starting: Checkout spartax-api@stable to s
+2025-06-10T09:00:33.9781227Z ==============================================================================
+2025-06-10T09:00:33.9782064Z Task         : Get sources
+2025-06-10T09:00:33.9782372Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-06-10T09:00:33.9782925Z Version      : 1.0.0
+2025-06-10T09:00:33.9783256Z Author       : Microsoft
+2025-06-10T09:00:33.9783621Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-06-10T09:00:33.9783784Z ==============================================================================
+2025-06-10T09:00:34.3702640Z Syncing repository: spartax-api (Git)
+2025-06-10T09:00:34.3750456Z ##[command]git version
+2025-06-10T09:00:34.3839015Z git version 2.43.0
+2025-06-10T09:00:34.4087918Z ##[command]git init "/home/ogourari/azagent-api/_work/3/s"
+2025-06-10T09:00:34.4184491Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-10T09:00:34.4197951Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-10T09:00:34.4205658Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-10T09:00:34.4206022Z hint: 
+2025-06-10T09:00:34.4206418Z hint: 	git config --global init.defaultBranch <name>
+2025-06-10T09:00:34.4206743Z hint: 
+2025-06-10T09:00:34.4207099Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-10T09:00:34.4207528Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-10T09:00:34.4208014Z hint: 
+2025-06-10T09:00:34.4208348Z hint: 	git branch -m <name>
+2025-06-10T09:00:34.4210249Z Initialized empty Git repository in /home/ogourari/azagent-api/_work/3/s/.git/
+2025-06-10T09:00:34.4216650Z ##[command]git remote add origin https://DCM-IT-TAX-DEV@dev.azure.com/DCM-IT-TAX-DEV/spartax-api/_git/spartax-api
+2025-06-10T09:00:34.4274656Z ##[command]git sparse-checkout disable
+2025-06-10T09:00:34.4385858Z ##[command]git config gc.auto 0
+2025-06-10T09:00:34.4397704Z ##[command]git config core.longpaths true
+2025-06-10T09:00:34.4560391Z ##[command]git config --get-all http.https://DCM-IT-TAX-DEV@dev.azure.com/DCM-IT-TAX-DEV/spartax-api/_git/spartax-api.extraheader
+2025-06-10T09:00:34.4577444Z ##[command]git config --get-all http.extraheader
+2025-06-10T09:00:34.4603373Z ##[command]git config --get-regexp .*extraheader
+2025-06-10T09:00:34.4616335Z ##[command]git config --get-all http.proxy
+2025-06-10T09:00:34.4631111Z ##[command]git config http.version HTTP/1.1
+2025-06-10T09:00:34.4688106Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +c575111344cbaf018179e1332af280c64d9212e0:refs/remotes/origin/c575111344cbaf018179e1332af280c64d9212e0
+2025-06-10T09:00:34.7778272Z remote: Azure Repos        
+2025-06-10T09:00:34.7783353Z remote: 
+2025-06-10T09:00:34.7784054Z remote: Found 214 objects to send. (1 ms)        
+2025-06-10T09:00:34.9323954Z Receiving objects:   0% (1/214)
+2025-06-10T09:00:34.9324552Z Receiving objects:   1% (3/214)
+2025-06-10T09:00:34.9325092Z Receiving objects:   2% (5/214)
+2025-06-10T09:00:34.9325585Z Receiving objects:   3% (7/214)
+2025-06-10T09:00:34.9326128Z Receiving objects:   4% (9/214)
+2025-06-10T09:00:34.9326644Z Receiving objects:   5% (11/214)
+2025-06-10T09:00:34.9327153Z Receiving objects:   6% (13/214)
+2025-06-10T09:00:34.9327666Z Receiving objects:   7% (15/214)
+2025-06-10T09:00:34.9328522Z Receiving objects:   8% (18/214)
+2025-06-10T09:00:34.9329045Z Receiving objects:   9% (20/214)
+2025-06-10T09:00:34.9329567Z Receiving objects:  10% (22/214)
+2025-06-10T09:00:34.9330101Z Receiving objects:  11% (24/214)
+2025-06-10T09:00:34.9330616Z Receiving objects:  12% (26/214)
+2025-06-10T09:00:34.9331120Z Receiving objects:  13% (28/214)
+2025-06-10T09:00:34.9331638Z Receiving objects:  14% (30/214)
+2025-06-10T09:00:34.9332149Z Receiving objects:  15% (33/214)
+2025-06-10T09:00:34.9333013Z Receiving objects:  16% (35/214)
+2025-06-10T09:00:34.9333571Z Receiving objects:  17% (37/214)
+2025-06-10T09:00:34.9334083Z Receiving objects:  18% (39/214)
+2025-06-10T09:00:34.9334642Z Receiving objects:  19% (41/214)
+2025-06-10T09:00:34.9335185Z Receiving objects:  20% (43/214)
+2025-06-10T09:00:34.9335886Z Receiving objects:  21% (45/214)
+2025-06-10T09:00:34.9336413Z Receiving objects:  22% (48/214)
+2025-06-10T09:00:34.9336961Z Receiving objects:  23% (50/214)
+2025-06-10T09:00:34.9337504Z Receiving objects:  24% (52/214)
+2025-06-10T09:00:34.9338197Z Receiving objects:  25% (54/214)
+2025-06-10T09:00:34.9338830Z Receiving objects:  26% (56/214)
+2025-06-10T09:00:34.9339359Z Receiving objects:  27% (58/214)
+2025-06-10T09:00:34.9339899Z Receiving objects:  28% (60/214)
+2025-06-10T09:00:34.9340446Z Receiving objects:  29% (63/214)
+2025-06-10T09:00:34.9345014Z Receiving objects:  30% (65/214)
+2025-06-10T09:00:34.9345587Z Receiving objects:  31% (67/214)
+2025-06-10T09:00:34.9346158Z Receiving objects:  32% (69/214)
+2025-06-10T09:00:34.9346765Z Receiving objects:  33% (71/214)
+2025-06-10T09:00:34.9347313Z Receiving objects:  34% (73/214)
+2025-06-10T09:00:34.9347970Z Receiving objects:  35% (75/214)
+2025-06-10T09:00:34.9348508Z Receiving objects:  36% (78/214)
+2025-06-10T09:00:34.9349066Z Receiving objects:  37% (80/214)
+2025-06-10T09:00:34.9426171Z Receiving objects:  38% (82/214)
+2025-06-10T09:00:35.0582900Z Receiving objects:  39% (84/214)
+2025-06-10T09:00:35.0624202Z Receiving objects:  40% (86/214)
+2025-06-10T09:00:35.0624979Z Receiving objects:  41% (88/214)
+2025-06-10T09:00:35.0625692Z Receiving objects:  42% (90/214)
+2025-06-10T09:00:35.0626390Z Receiving objects:  43% (93/214)
+2025-06-10T09:00:35.0627065Z Receiving objects:  44% (95/214)
+2025-06-10T09:00:35.0627723Z Receiving objects:  45% (97/214)
+2025-06-10T09:00:35.0639202Z Receiving objects:  46% (99/214)
+2025-06-10T09:00:35.0647615Z Receiving objects:  47% (101/214)
+2025-06-10T09:00:35.0648501Z Receiving objects:  48% (103/214)
+2025-06-10T09:00:35.0649657Z Receiving objects:  49% (105/214)
+2025-06-10T09:00:35.0650361Z Receiving objects:  50% (107/214)
+2025-06-10T09:00:35.0651058Z Receiving objects:  51% (110/214)
+2025-06-10T09:00:35.0651728Z Receiving objects:  52% (112/214)
+2025-06-10T09:00:35.0669534Z Receiving objects:  53% (114/214)
+2025-06-10T09:00:35.0670359Z Receiving objects:  54% (116/214)
+2025-06-10T09:00:35.0679213Z Receiving objects:  55% (118/214)
+2025-06-10T09:00:35.0681117Z Receiving objects:  56% (120/214)
+2025-06-10T09:00:35.0681718Z Receiving objects:  57% (122/214)
+2025-06-10T09:00:35.0682314Z Receiving objects:  58% (125/214)
+2025-06-10T09:00:35.0682905Z Receiving objects:  59% (127/214)
+2025-06-10T09:00:35.0683482Z Receiving objects:  60% (129/214)
+2025-06-10T09:00:35.0684076Z Receiving objects:  61% (131/214)
+2025-06-10T09:00:35.0684674Z Receiving objects:  62% (133/214)
+2025-06-10T09:00:35.0685262Z Receiving objects:  63% (135/214)
+2025-06-10T09:00:35.0685847Z Receiving objects:  64% (137/214)
+2025-06-10T09:00:35.0686454Z Receiving objects:  65% (140/214)
+2025-06-10T09:00:35.0687025Z Receiving objects:  66% (142/214)
+2025-06-10T09:00:35.0687614Z Receiving objects:  67% (144/214)
+2025-06-10T09:00:35.0688586Z Receiving objects:  68% (146/214)
+2025-06-10T09:00:35.0689192Z Receiving objects:  69% (148/214)
+2025-06-10T09:00:35.0689793Z Receiving objects:  70% (150/214)
+2025-06-10T09:00:35.0690368Z Receiving objects:  71% (152/214)
+2025-06-10T09:00:35.0690953Z Receiving objects:  72% (155/214)
+2025-06-10T09:00:35.0691542Z Receiving objects:  73% (157/214)
+2025-06-10T09:00:35.0692128Z Receiving objects:  74% (159/214)
+2025-06-10T09:00:35.0692711Z Receiving objects:  75% (161/214)
+2025-06-10T09:00:35.0693279Z Receiving objects:  76% (163/214)
+2025-06-10T09:00:35.0693858Z Receiving objects:  77% (165/214)
+2025-06-10T09:00:35.0694451Z Receiving objects:  78% (167/214)
+2025-06-10T09:00:35.0695036Z Receiving objects:  79% (170/214)
+2025-06-10T09:00:35.0695621Z Receiving objects:  80% (172/214)
+2025-06-10T09:00:35.0696636Z Receiving objects:  81% (174/214)
+2025-06-10T09:00:35.0697252Z Receiving objects:  82% (176/214)
+2025-06-10T09:00:35.0697931Z Receiving objects:  83% (178/214)
+2025-06-10T09:00:35.0698527Z Receiving objects:  84% (180/214)
+2025-06-10T09:00:35.0699097Z Receiving objects:  85% (182/214)
+2025-06-10T09:00:35.0699870Z Receiving objects:  86% (185/214)
+2025-06-10T09:00:35.0700469Z Receiving objects:  87% (187/214)
+2025-06-10T09:00:35.0701064Z Receiving objects:  88% (189/214)
+2025-06-10T09:00:35.0701663Z Receiving objects:  89% (191/214)
+2025-06-10T09:00:35.0702279Z Receiving objects:  90% (193/214)
+2025-06-10T09:00:35.0702910Z Receiving objects:  91% (195/214)
+2025-06-10T09:00:35.0703537Z Receiving objects:  92% (197/214)
+2025-06-10T09:00:35.0704159Z Receiving objects:  93% (200/214)
+2025-06-10T09:00:35.0704788Z Receiving objects:  94% (202/214)
+2025-06-10T09:00:35.0705402Z Receiving objects:  95% (204/214)
+2025-06-10T09:00:35.0706033Z Receiving objects:  96% (206/214)
+2025-06-10T09:00:35.0706672Z Receiving objects:  97% (208/214)
+2025-06-10T09:00:35.0707302Z Receiving objects:  98% (210/214)
+2025-06-10T09:00:35.0708107Z Receiving objects:  99% (212/214)
+2025-06-10T09:00:35.0708738Z Receiving objects: 100% (214/214)
+2025-06-10T09:00:35.0709451Z Receiving objects: 100% (214/214), 428.49 KiB | 6.03 MiB/s, done.
+2025-06-10T09:00:35.0710148Z Resolving deltas:   0% (0/47)
+2025-06-10T09:00:35.0710745Z Resolving deltas:   2% (1/47)
+2025-06-10T09:00:35.0711353Z Resolving deltas:   4% (2/47)
+2025-06-10T09:00:35.0711940Z Resolving deltas:   6% (3/47)
+2025-06-10T09:00:35.0712542Z Resolving deltas:   8% (4/47)
+2025-06-10T09:00:35.0713146Z Resolving deltas:  10% (5/47)
+2025-06-10T09:00:35.0713752Z Resolving deltas:  12% (6/47)
+2025-06-10T09:00:35.0714343Z Resolving deltas:  14% (7/47)
+2025-06-10T09:00:35.0714944Z Resolving deltas:  17% (8/47)
+2025-06-10T09:00:35.0715548Z Resolving deltas:  19% (9/47)
+2025-06-10T09:00:35.0716154Z Resolving deltas:  21% (10/47)
+2025-06-10T09:00:35.0716755Z Resolving deltas:  23% (11/47)
+2025-06-10T09:00:35.0717370Z Resolving deltas:  25% (12/47)
+2025-06-10T09:00:35.0718041Z Resolving deltas:  27% (13/47)
+2025-06-10T09:00:35.0718644Z Resolving deltas:  29% (14/47)
+2025-06-10T09:00:35.0719236Z Resolving deltas:  31% (15/47)
+2025-06-10T09:00:35.0720262Z Resolving deltas:  34% (16/47)
+2025-06-10T09:00:35.0720864Z Resolving deltas:  36% (17/47)
+2025-06-10T09:00:35.0721460Z Resolving deltas:  38% (18/47)
+2025-06-10T09:00:35.0722133Z Resolving deltas:  40% (19/47)
+2025-06-10T09:00:35.0722728Z Resolving deltas:  42% (20/47)
+2025-06-10T09:00:35.0723311Z Resolving deltas:  44% (21/47)
+2025-06-10T09:00:35.0723907Z Resolving deltas:  46% (22/47)
+2025-06-10T09:00:35.0724505Z Resolving deltas:  48% (23/47)
+2025-06-10T09:00:35.0725096Z Resolving deltas:  51% (24/47)
+2025-06-10T09:00:35.0725672Z Resolving deltas:  53% (25/47)
+2025-06-10T09:00:35.0726217Z Resolving deltas:  55% (26/47)
+2025-06-10T09:00:35.0726763Z Resolving deltas:  57% (27/47)
+2025-06-10T09:00:35.0727620Z Resolving deltas:  59% (28/47)
+2025-06-10T09:00:35.0728329Z Resolving deltas:  61% (29/47)
+2025-06-10T09:00:35.0728882Z Resolving deltas:  63% (30/47)
+2025-06-10T09:00:35.0729417Z Resolving deltas:  65% (31/47)
+2025-06-10T09:00:35.0729958Z Resolving deltas:  68% (32/47)
+2025-06-10T09:00:35.0730500Z Resolving deltas:  72% (34/47)
+2025-06-10T09:00:35.0731058Z Resolving deltas:  74% (35/47)
+2025-06-10T09:00:35.0731612Z Resolving deltas:  76% (36/47)
+2025-06-10T09:00:35.0732147Z Resolving deltas:  78% (37/47)
+2025-06-10T09:00:35.0732689Z Resolving deltas:  80% (38/47)
+2025-06-10T09:00:35.0733229Z Resolving deltas:  82% (39/47)
+2025-06-10T09:00:35.0733770Z Resolving deltas:  85% (40/47)
+2025-06-10T09:00:35.0734299Z Resolving deltas:  87% (41/47)
+2025-06-10T09:00:35.0734839Z Resolving deltas:  89% (42/47)
+2025-06-10T09:00:35.0735389Z Resolving deltas:  91% (43/47)
+2025-06-10T09:00:35.0735930Z Resolving deltas:  93% (44/47)
+2025-06-10T09:00:35.0736474Z Resolving deltas:  95% (45/47)
+2025-06-10T09:00:35.0737003Z Resolving deltas:  97% (46/47)
+2025-06-10T09:00:35.0737752Z Resolving deltas: 100% (47/47)
+2025-06-10T09:00:35.0738418Z Resolving deltas: 100% (47/47), done.
+2025-06-10T09:00:35.1700432Z From https://dev.azure.com/DCM-IT-TAX-DEV/spartax-api/_git/spartax-api
+2025-06-10T09:00:35.1701288Z  * [new ref]         c575111344cbaf018179e1332af280c64d9212e0 -> origin/c575111344cbaf018179e1332af280c64d9212e0
+2025-06-10T09:00:35.1702248Z  * [new tag]         1.0.1         -> 1.0.1
+2025-06-10T09:00:35.1702798Z  * [new tag]         v1.0.0        -> v1.0.0
+2025-06-10T09:00:35.1703371Z  * [new tag]         v1.0.0-beta.1 -> v1.0.0-beta.1
+2025-06-10T09:00:35.1704012Z  * [new tag]         v1.0.0-beta.2 -> v1.0.0-beta.2
+2025-06-10T09:00:35.1704635Z  * [new tag]         v1.0.0-beta.3 -> v1.0.0-beta.3
+2025-06-10T09:00:35.2347476Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +c575111344cbaf018179e1332af280c64d9212e0
+2025-06-10T09:00:36.0801656Z remote: Azure Repos        
+2025-06-10T09:00:36.0835638Z remote: 
+2025-06-10T09:00:36.0845018Z remote: Found 0 objects to send. (198 ms)        
+2025-06-10T09:00:36.0845384Z From https://dev.azure.com/DCM-IT-TAX-DEV/spartax-api/_git/spartax-api
+2025-06-10T09:00:36.0845755Z  * branch            c575111344cbaf018179e1332af280c64d9212e0 -> FETCH_HEAD
+2025-06-10T09:00:36.1835479Z ##[command]git checkout --progress --force refs/remotes/origin/c575111344cbaf018179e1332af280c64d9212e0
+2025-06-10T09:00:36.1842661Z Note: switching to 'refs/remotes/origin/c575111344cbaf018179e1332af280c64d9212e0'.
+2025-06-10T09:00:36.1842829Z 
+2025-06-10T09:00:36.1843124Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-06-10T09:00:36.1843476Z changes and commit them, and you can discard any commits you make in this
+2025-06-10T09:00:36.1843807Z state without impacting any branches by switching back to a branch.
+2025-06-10T09:00:36.1843963Z 
+2025-06-10T09:00:36.1936081Z If you want to create a new branch to retain commits you create, you may
+2025-06-10T09:00:36.1936457Z do so (now or later) by using -c with the switch command. Example:
+2025-06-10T09:00:36.1936630Z 
+2025-06-10T09:00:36.1936918Z   git switch -c <new-branch-name>
+2025-06-10T09:00:36.1937037Z 
+2025-06-10T09:00:36.1937288Z Or undo this operation with:
+2025-06-10T09:00:36.1937406Z 
+2025-06-10T09:00:36.1937642Z   git switch -
+2025-06-10T09:00:36.1937735Z 
+2025-06-10T09:00:36.1938241Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-06-10T09:00:36.1938401Z 
+2025-06-10T09:00:36.1938656Z HEAD is now at c575111 Fix: updated poetry.lock
+2025-06-10T09:00:36.2106978Z ##[section]Finishing: Checkout spartax-api@stable to s
+2025-06-10T09:00:36.2142730Z ##[section]Starting: Environment setup & Run DB Migration with Poetry
+2025-06-10T09:00:36.2152342Z ==============================================================================
+2025-06-10T09:00:36.2152554Z Task         : Bash
+2025-06-10T09:00:36.2152660Z Description  : Run a Bash script on macOS, Linux, or Windows
+2025-06-10T09:00:36.2152817Z Version      : 3.250.1
+2025-06-10T09:00:36.2153003Z Author       : Microsoft Corporation
+2025-06-10T09:00:36.2153136Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2025-06-10T09:00:36.2153331Z ==============================================================================
+2025-06-10T09:00:36.5069488Z Generating script.
+2025-06-10T09:00:36.5082661Z ========================== Starting Command Output ===========================
+2025-06-10T09:00:36.5092566Z [command]/usr/bin/bash /home/ogourari/azagent-api/_work/_temp/28ed7e63-4a69-4b28-950e-c3fa826302b8.sh
+2025-06-10T09:00:36.5265341Z 📦 Starting prepare environment script...
+2025-06-10T09:00:36.7898208Z ✅ Python 3.9.21 already installed
+2025-06-10T09:00:36.9375338Z 🔍 Python version: 3.9.21
+2025-06-10T09:00:40.9602048Z 📁 App directory: /home/ogourari/azagent-api/_work/3/s
+2025-06-10T09:00:40.9602459Z 📦 Creating virtual environment at .venv
+2025-06-10T09:00:40.9633122Z ✅ Virtualenv activated: /home/ogourari/azagent-api/_work/3/s/.venv/bin/python
+2025-06-10T09:00:40.9642784Z 🔍 Checking lock file sync between pyproject.toml and poetry.lock...
+2025-06-10T09:00:40.9739150Z ✅ Lock file is in sync
+2025-06-10T09:00:40.9739440Z 📦 Installing dependencies via poetry install (pipeline)
+2025-06-10T09:00:40.9781145Z Could not find platform independent libraries <prefix>
+2025-06-10T09:00:40.9785295Z Could not find platform dependent libraries <exec_prefix>
+2025-06-10T09:00:40.9786207Z Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+2025-06-10T09:00:40.9800890Z Python path configuration:
+2025-06-10T09:00:40.9801051Z   PYTHONHOME = (not set)
+2025-06-10T09:00:40.9803303Z   PYTHONPATH = (not set)
+2025-06-10T09:00:40.9812142Z   program name = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:40.9814085Z   isolated = 0
+2025-06-10T09:00:40.9815196Z   environment = 1
+2025-06-10T09:00:40.9815636Z   user site = 1
+2025-06-10T09:00:40.9816124Z   import site = 1
+2025-06-10T09:00:40.9816358Z   sys._base_executable = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:40.9816557Z   sys.base_prefix = '/usr'
+2025-06-10T09:00:40.9824059Z   sys.base_exec_prefix = '/usr'
+2025-06-10T09:00:40.9824268Z   sys.platlibdir = 'lib'
+2025-06-10T09:00:40.9824491Z   sys.executable = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:40.9824680Z   sys.prefix = '/usr'
+2025-06-10T09:00:40.9824834Z   sys.exec_prefix = '/usr'
+2025-06-10T09:00:40.9824984Z   sys.path = [
+2025-06-10T09:00:40.9825141Z     '/usr/lib/python310.zip',
+2025-06-10T09:00:40.9825283Z     '/usr/lib/python3.10',
+2025-06-10T09:00:40.9825462Z     '/usr/lib/lib-dynload',
+2025-06-10T09:00:40.9825619Z   ]
+2025-06-10T09:00:40.9825814Z Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2025-06-10T09:00:40.9826031Z Python runtime state: core initialized
+2025-06-10T09:00:40.9826217Z ModuleNotFoundError: No module named 'encodings'
+2025-06-10T09:00:40.9826304Z 
+2025-06-10T09:00:40.9826471Z Current thread 0x000077d35bf55080 (most recent call first):
+2025-06-10T09:00:40.9826634Z   <no Python frame>
+2025-06-10T09:00:40.9827194Z 📦 Starting Alembic migration...
+2025-06-10T09:00:40.9827454Z 🔍 Checking Alembic status and pending migrations...
+2025-06-10T09:00:40.9897280Z ❌ Failed to get current revision from Alembic. Database may be unreachable or FLASK_APP misconfigured.
+2025-06-10T09:00:40.9898817Z ❌ Aborting migration.
+2025-06-10T09:00:40.9934581Z ❌ Failed to get heads revision from Alembic. Please check Alembic configuration.
+2025-06-10T09:00:40.9990744Z Could not find platform independent libraries <prefix>
+2025-06-10T09:00:40.9992142Z Could not find platform dependent libraries <exec_prefix>
+2025-06-10T09:00:40.9992355Z Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+2025-06-10T09:00:41.0008124Z Python path configuration:
+2025-06-10T09:00:41.0008661Z   PYTHONHOME = (not set)
+2025-06-10T09:00:41.0009386Z   PYTHONPATH = (not set)
+2025-06-10T09:00:41.0009944Z   program name = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:41.0010532Z   isolated = 0
+2025-06-10T09:00:41.0010680Z   environment = 1
+2025-06-10T09:00:41.0010823Z   user site = 1
+2025-06-10T09:00:41.0011127Z   import site = 1
+2025-06-10T09:00:41.0013425Z   sys._base_executable = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:41.0013724Z   sys.base_prefix = '/usr'
+2025-06-10T09:00:41.0013888Z   sys.base_exec_prefix = '/usr'
+2025-06-10T09:00:41.0014050Z   sys.platlibdir = 'lib'
+2025-06-10T09:00:41.0014241Z   sys.executable = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:41.0014429Z   sys.prefix = '/usr'
+2025-06-10T09:00:41.0014592Z   sys.exec_prefix = '/usr'
+2025-06-10T09:00:41.0014727Z   sys.path = [
+2025-06-10T09:00:41.0014957Z     '/usr/lib/python310.zip',
+2025-06-10T09:00:41.0015114Z     '/usr/lib/python3.10',
+2025-06-10T09:00:41.0015270Z     '/usr/lib/lib-dynload',
+2025-06-10T09:00:41.0015408Z   ]
+2025-06-10T09:00:41.0015588Z Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2025-06-10T09:00:41.0015806Z Python runtime state: core initialized
+2025-06-10T09:00:41.0015992Z ModuleNotFoundError: No module named 'encodings'
+2025-06-10T09:00:41.0016076Z 
+2025-06-10T09:00:41.0016498Z Current thread 0x0000737a54b92080 (most recent call first):
+2025-06-10T09:00:41.0016677Z   <no Python frame>
+2025-06-10T09:00:41.0071370Z Could not find platform independent libraries <prefix>
+2025-06-10T09:00:41.0075556Z Could not find platform dependent libraries <exec_prefix>
+2025-06-10T09:00:41.0075770Z Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+2025-06-10T09:00:41.0089436Z Python path configuration:
+2025-06-10T09:00:41.0090147Z   PYTHONHOME = (not set)
+2025-06-10T09:00:41.0091215Z   PYTHONPATH = (not set)
+2025-06-10T09:00:41.0091567Z   program name = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:41.0092439Z   isolated = 0
+2025-06-10T09:00:41.0094081Z   environment = 1
+2025-06-10T09:00:41.0096127Z   user site = 1
+2025-06-10T09:00:41.0096546Z   import site = 1
+2025-06-10T09:00:41.0097266Z   sys._base_executable = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:41.0097622Z   sys.base_prefix = '/usr'
+2025-06-10T09:00:41.0098011Z   sys.base_exec_prefix = '/usr'
+2025-06-10T09:00:41.0104091Z   sys.platlibdir = 'lib'
+2025-06-10T09:00:41.0105337Z   sys.executable = '/home/ogourari/.local/share/pypoetry/venv/bin/python'
+2025-06-10T09:00:41.0105649Z   sys.prefix = '/usr'
+2025-06-10T09:00:41.0107265Z   sys.exec_prefix = '/usr'
+2025-06-10T09:00:41.0107629Z   sys.path = [
+2025-06-10T09:00:41.0108107Z     '/usr/lib/python310.zip',
+2025-06-10T09:00:41.0108519Z     '/usr/lib/python3.10',
+2025-06-10T09:00:41.0108845Z     '/usr/lib/lib-dynload',
+2025-06-10T09:00:41.0115518Z   ]
+2025-06-10T09:00:41.0118572Z Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2025-06-10T09:00:41.0118811Z Python runtime state: core initialized
+2025-06-10T09:00:41.0119009Z ModuleNotFoundError: No module named 'encodings'
+2025-06-10T09:00:41.0119092Z 
+2025-06-10T09:00:41.0119266Z Current thread 0x000074b8e499d080 (most recent call first):
+2025-06-10T09:00:41.0119449Z   <no Python frame>
+2025-06-10T09:00:41.0119832Z ❌ Revision values are empty despite Alembic being available. Aborting pipeline.
+2025-06-10T09:00:41.0120150Z ✅ No migration required. Current revision matches latest: 
+2025-06-10T09:00:41.0120428Z 🧹 Cleaning up non-essential files and folders...
+2025-06-10T09:00:41.0819357Z ✅ Cleanup complete.
+2025-06-10T09:00:41.0861421Z 📂 pyproject.toml: ./pyproject.toml
+2025-06-10T09:00:41.0910703Z 📂 poetry.lock:    ./poetry.lock
+2025-06-10T09:00:41.0911838Z 📦 Creating cleaned zip archive...
+2025-06-10T09:00:41.1218710Z updating: deploy.sh (deflated 70%)
+2025-06-10T09:00:41.1218913Z updating: pyproject.toml (deflated 48%)
+2025-06-10T09:00:41.1219084Z updating: gunicorn.config.py (deflated 52%)
+2025-06-10T09:00:41.1230249Z updating: favicon.ico (deflated 94%)
+2025-06-10T09:00:41.1231069Z updating: azure-pipelines.yaml (deflated 44%)
+2025-06-10T09:00:41.1235432Z updating: postman.json (deflated 83%)
+2025-06-10T09:00:41.1235901Z updating: api.code-workspace (deflated 59%)
+2025-06-10T09:00:41.1236504Z updating: app/ (stored 0%)
+2025-06-10T09:00:41.1242145Z updating: app/resource_access.py (deflated 71%)
+2025-06-10T09:00:41.1242566Z updating: app/models/ (stored 0%)
+2025-06-10T09:00:41.1246391Z updating: app/models/request.py (deflated 76%)
+2025-06-10T09:00:41.1247482Z updating: app/models/company.py (deflated 74%)
+2025-06-10T09:00:41.1249701Z updating: app/models/pushlog.py (deflated 67%)
+2025-06-10T09:00:41.1252036Z updating: app/models/person.py (deflated 68%)
+2025-06-10T09:00:41.1258855Z updating: app/models/coc.py (deflated 72%)
+2025-06-10T09:00:41.1259361Z updating: app/models/document.py (deflated 78%)
+2025-06-10T09:00:41.1264102Z updating: app/models/user.py (deflated 74%)
+2025-06-10T09:00:41.1268673Z updating: app/main.py (deflated 72%)
+2025-06-10T09:00:41.1271627Z updating: app/constants.py (deflated 35%)
+2025-06-10T09:00:41.1272049Z updating: app/enums/ (stored 0%)
+2025-06-10T09:00:41.1272476Z updating: app/enums/mail/ (stored 0%)
+2025-06-10T09:00:41.1276160Z updating: app/enums/mail/mail.py (deflated 77%)
+2025-06-10T09:00:41.1277449Z updating: app/enums/document/ (stored 0%)
+2025-06-10T09:00:41.1286636Z updating: app/enums/document/document.py (deflated 70%)
+2025-06-10T09:00:41.1287113Z updating: app/enums/request/ (stored 0%)
+2025-06-10T09:00:41.1287529Z updating: app/enums/request/status.py (deflated 43%)
+2025-06-10T09:00:41.1288874Z updating: app/enums/request/action.py (deflated 53%)
+2025-06-10T09:00:41.1289291Z updating: app/enums/coc/ (stored 0%)
+2025-06-10T09:00:41.1289632Z updating: app/enums/coc/coc.py (deflated 43%)
+2025-06-10T09:00:41.1290862Z updating: app/enums/utils.py (deflated 17%)
+2025-06-10T09:00:41.1291038Z updating: app/enums/entities.py (deflated 70%)
+2025-06-10T09:00:41.1291225Z updating: app/enums/__init__.py (stored 0%)
+2025-06-10T09:00:41.1291403Z updating: app/enums/user/ (stored 0%)
+2025-06-10T09:00:41.1291587Z updating: app/enums/user/resources.py (deflated 56%)
+2025-06-10T09:00:41.1291766Z updating: app/static/ (stored 0%)
+2025-06-10T09:00:41.1291928Z updating: app/static/style.css (deflated 61%)
+2025-06-10T09:00:41.1292110Z updating: app/auth/ (stored 0%)
+2025-06-10T09:00:41.1292292Z updating: app/auth/auth_config.py (deflated 56%)
+2025-06-10T09:00:41.1292477Z updating: app/auth/auth.py (deflated 72%)
+2025-06-10T09:00:41.1292651Z updating: app/utils.py (deflated 64%)
+2025-06-10T09:00:41.1292819Z updating: app/resources/ (stored 0%)
+2025-06-10T09:00:41.1292988Z updating: app/resources/mail.py (deflated 71%)
+2025-06-10T09:00:41.1293182Z updating: app/resources/company_card.py (deflated 73%)
+2025-06-10T09:00:41.1295662Z updating: app/resources/report.py (deflated 74%)
+2025-06-10T09:00:41.1307489Z updating: app/resources/request.py (deflated 81%)
+2025-06-10T09:00:41.1309712Z updating: app/resources/rebuy_document.py (deflated 69%)
+2025-06-10T09:00:41.1314024Z updating: app/resources/company.py (deflated 78%)
+2025-06-10T09:00:41.1314952Z updating: app/resources/person.py (deflated 74%)
+2025-06-10T09:00:41.1315145Z updating: app/resources/health.py (deflated 58%)
+2025-06-10T09:00:41.1317365Z updating: app/resources/not_found.py (deflated 53%)
+2025-06-10T09:00:41.1319042Z updating: app/resources/__init__.py (deflated 76%)
+2025-06-10T09:00:41.1319246Z updating: app/resources/shares.py (deflated 73%)
+2025-06-10T09:00:41.1321347Z updating: app/resources/coc.py (deflated 68%)
+2025-06-10T09:00:41.1324214Z updating: app/resources/document.py (deflated 76%)
+2025-06-10T09:00:41.1328139Z updating: app/resources/financial_statement.py (deflated 80%)
+2025-06-10T09:00:41.1331910Z updating: app/resources/balance.py (deflated 79%)
+2025-06-10T09:00:41.1335668Z updating: app/resources/person_report.py (deflated 74%)
+2025-06-10T09:00:41.1338802Z updating: app/resources/legal_procedures_deed.py (deflated 74%)
+2025-06-10T09:00:41.1339898Z updating: app/resources/shareholders.py (deflated 74%)
+2025-06-10T09:00:41.1342689Z updating: app/resources/user.py (deflated 64%)
+2025-06-10T09:00:41.1346651Z updating: app/resources/visura.py (deflated 76%)
+2025-06-10T09:00:41.1349811Z updating: app/resources/representative_card.py (deflated 75%)
+2025-06-10T09:00:41.1354158Z updating: app/config.py (deflated 68%)
+2025-06-10T09:00:41.1356949Z updating: app/routes/ (stored 0%)
+2025-06-10T09:00:41.1357136Z updating: app/routes/home.py (deflated 62%)
+2025-06-10T09:00:41.1357300Z updating: app/templates/ (stored 0%)
+2025-06-10T09:00:41.1357481Z updating: app/templates/home.html (deflated 31%)
+2025-06-10T09:00:41.1366485Z updating: app/templates/email.html (deflated 61%)
+2025-06-10T09:00:41.1369459Z updating: app/validate.py (deflated 73%)
+2025-06-10T09:00:41.1371145Z updating: app/extensions.py (deflated 67%)
+2025-06-10T09:00:41.1372442Z updating: app/assets/ (stored 0%)
+2025-06-10T09:00:41.1373018Z updating: app/assets/certs/ (stored 0%)
+2025-06-10T09:00:41.1373483Z updating: app/assets/certs/localhost.crt (deflated 24%)
+2025-06-10T09:00:41.1376066Z updating: app/assets/certs/spartaxtest.deloitte.it.pfx (deflated 24%)
+2025-06-10T09:00:41.1378761Z updating: app/assets/certs/localhost.key (deflated 23%)
+2025-06-10T09:00:41.1379525Z updating: app/storage/ (stored 0%)
+2025-06-10T09:00:41.1379990Z updating: app/storage/azstorage.py (deflated 68%)
+2025-06-10T09:00:41.1382137Z updating: app/cache.py (deflated 76%)
+2025-06-10T09:00:41.2259636Z updating: poetry.lock (deflated 70%)
+2025-06-10T09:00:41.2260590Z updating: prepare-env.sh (deflated 69%)
+2025-06-10T09:00:41.2428422Z 
+2025-06-10T09:00:41.2521980Z ##[section]Finishing: Environment setup & Run DB Migration with Poetry
+2025-06-10T09:00:41.2542348Z ##[section]Starting: PublishPipelineArtifact
+2025-06-10T09:00:41.2548661Z ==============================================================================
+2025-06-10T09:00:41.2548784Z Task         : Publish Pipeline Artifacts
+2025-06-10T09:00:41.2548873Z Description  : Publish (upload) a file or directory as a named artifact for the current run
+2025-06-10T09:00:41.2548984Z Version      : 1.242.0
+2025-06-10T09:00:41.2549052Z Author       : Microsoft Corporation
+2025-06-10T09:00:41.2549138Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact
+2025-06-10T09:00:41.2549266Z ==============================================================================
+2025-06-10T09:00:41.5107030Z Artifact name input: drop
+2025-06-10T09:00:41.5221396Z Uploading pipeline artifact from /home/ogourari/azagent-api/_work/3/drop/application.zip for build #929
+2025-06-10T09:00:42.0544193Z Using default max parallelism.
+2025-06-10T09:00:42.0548948Z Max dedup parallelism: 192
+2025-06-10T09:00:42.0549581Z DomainId: 0
+2025-06-10T09:00:42.1930714Z ApplicationInsightsTelemetrySender will correlate events with X-TFS-Session 67478098-5f17-4a28-8d2e-b83aea38fc5b
+2025-06-10T09:00:42.2029778Z Hashtype: Dedup1024K
+2025-06-10T09:00:42.2186971Z DedupManifestArtifactClient will correlate http requests with X-TFS-Session 67478098-5f17-4a28-8d2e-b83aea38fc5b
+2025-06-10T09:00:42.6380590Z 1 files processed.
+2025-06-10T09:00:42.6382030Z Processed 1 files from /home/ogourari/azagent-api/_work/3/drop successfully.
+2025-06-10T09:00:44.2516711Z Uploaded 3,297,164 out of 67,121,706 bytes
+2025-06-10T09:00:44.2517330Z Content upload is done!
+2025-06-10T09:00:44.2541405Z 
+2025-06-10T09:00:44.2542890Z Content upload statistics:
+2025-06-10T09:00:44.2543315Z Total Content: 134.2 MB
+2025-06-10T09:00:44.2544882Z Physical Content Uploaded: 2.2 MB
+2025-06-10T09:00:44.2555338Z Logical Content Uploaded: 3.3 MB
+2025-06-10T09:00:44.2555958Z Compression Saved: 1.1 MB
+2025-06-10T09:00:44.2556331Z Deduplication Saved: 130.9 MB
+2025-06-10T09:00:44.2558395Z Number of Chunks Uploaded: 4
+2025-06-10T09:00:44.2558778Z Total Number of Chunks: 154
+2025-06-10T09:00:44.2558977Z 
+2025-06-10T09:00:45.3308299Z Associated artifact 317 with build 929
+2025-06-10T09:00:45.3324823Z ApplicationInsightsTelemetrySender correlated 2 events with X-TFS-Session 67478098-5f17-4a28-8d2e-b83aea38fc5b
+2025-06-10T09:00:45.3327340Z Uploading pipeline artifact finished.
+2025-06-10T09:00:45.3517230Z ##[section]Finishing: PublishPipelineArtifact
+2025-06-10T09:00:45.3541239Z ##[section]Starting: Checkout spartax-api@stable to s
+2025-06-10T09:00:45.3545026Z ==============================================================================
+2025-06-10T09:00:45.3545149Z Task         : Get sources
+2025-06-10T09:00:45.3545230Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-06-10T09:00:45.3545338Z Version      : 1.0.0
+2025-06-10T09:00:45.3545397Z Author       : Microsoft
+2025-06-10T09:00:45.3545480Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-06-10T09:00:45.3545577Z ==============================================================================
+2025-06-10T09:00:45.6165962Z Cleaning any cached credential from repository: spartax-api (Git)
+2025-06-10T09:00:45.6273679Z ##[section]Finishing: Checkout spartax-api@stable to s
+2025-06-10T09:00:45.6298654Z ##[section]Starting: Finalize Job
+2025-06-10T09:00:45.6309952Z Cleaning up task key
+2025-06-10T09:00:45.6311081Z Start cleaning up orphan processes.
+2025-06-10T09:00:45.6618478Z ##[section]Finishing: Finalize Job
+2025-06-10T09:00:45.6644367Z ##[section]Finishing: Setup Python, Poetry and App Package_Deploy_AZU382ITN18001
