@@ -1,153 +1,1586 @@
-  Ok
-2025-06-11T06:08:04.5774602
+2025-06-11T05:57:04.1263333Z    _____                               
+2025-06-11T05:57:04.1317031Z   /  _  \ __________ _________   ____  
+2025-06-11T05:57:04.1318380Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T05:57:04.1318706Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T05:57:04.1318874Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T05:57:04.1319025Z         \/      \/                  \/ 
+2025-06-11T05:57:04.1319171Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T05:57:04.1319304Z 
+2025-06-11T05:57:04.1319425Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T05:57:04.1319533Z Python 3.9.22
+2025-06-11T05:57:04.1319654Z Note: Any data outside '/home' is not persisted
+2025-06-11T05:57:04.1623317Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T05:57:04.8937106Z Updating certificates in /etc/ssl/certs...
+2025-06-11T05:57:05.9277503Z 3 added, 0 removed; done.
+2025-06-11T05:57:05.9285894Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T05:57:05.9450958Z done.
+2025-06-11T05:57:05.9572678Z CA certificates copied and updated successfully.
+2025-06-11T05:57:06.0422227Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T05:57:06.2369685Z Starting periodic command scheduler: cron.
+2025-06-11T05:57:06.2371631Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T05:57:06.2664961Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T05:57:06.2666987Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T05:57:06.2670741Z Build Operation ID: ba8bb55e-f0c4-4e17-8142-0a2003246b14
+2025-06-11T05:57:07.3771028Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T05:57:07.6406817Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T05:57:08.1557236Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T05:57:08.1558373Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T05:57:12.4463318Z 
+2025-06-11T05:57:12.4463619Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T05:57:12.4464689Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T05:57:12.4465062Z 
+2025-06-11T05:57:12.4465150Z [Traceback (most recent call last):
+2025-06-11T05:57:12.4465272Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T05:57:12.4466361Z     return load_entry_point(dist, section, name)
+2025-06-11T05:57:12.4466511Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T05:57:12.4466633Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T05:57:12.4466714Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T05:57:12.4466804Z     return Distribution.from_name(distribution_name)
+2025-06-11T05:57:12.4466903Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T05:57:12.4466982Z     raise PackageNotFoundError(name)
+2025-06-11T05:57:12.4467054Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T05:57:12.4467125Z ]
+2025-06-11T05:57:12.4467428Z 
+2025-06-11T05:57:41.514366726Z    _____                               
+2025-06-11T05:57:41.514412621Z   /  _  \ __________ _________   ____  
+2025-06-11T05:57:41.514417317Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T05:57:41.514421234Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T05:57:41.514424767Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T05:57:41.514428356Z         \/      \/                  \/ 
+2025-06-11T05:57:41.514431783Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T05:57:41.514435170Z 
+2025-06-11T05:57:41.514438360Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T05:57:41.514441773Z Python 3.9.22
+2025-06-11T05:57:41.514445047Z Note: Any data outside '/home' is not persisted
+2025-06-11T05:57:41.525028069Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T05:57:41.576808668Z Updating certificates in /etc/ssl/certs...
+2025-06-11T05:57:44.000682763Z 3 added, 0 removed; done.
+2025-06-11T05:57:44.000707075Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T05:57:44.000712053Z done.
+2025-06-11T05:57:44.001926206Z CA certificates copied and updated successfully.
+2025-06-11T05:57:44.039871749Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T05:57:44.193097420Z Starting periodic command scheduler: cron.
+2025-06-11T05:57:44.194817762Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T05:57:44.202822335Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T05:57:44.203716014Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T05:57:44.203734731Z Build Operation ID: 166fe56f-bf7c-499d-8214-f8e677cc260e
+2025-06-11T05:57:45.350943390Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T05:57:45.620411183Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T05:57:45.895478590Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T05:57:45.896345179Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T05:57:48.114262756Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T05:57:48.114289784Z 
+2025-06-11T05:57:48.114334090Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T05:57:48.114338947Z 
+2025-06-11T05:57:48.114342450Z [Traceback (most recent call last):
+2025-06-11T05:57:48.114345978Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T05:57:48.114370671Z     return load_entry_point(dist, section, name)
+2025-06-11T05:57:48.114374398Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T05:57:48.114377956Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T05:57:48.114381602Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T05:57:48.114385293Z     return Distribution.from_name(distribution_name)
+2025-06-11T05:57:48.114388590Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T05:57:48.114392110Z     raise PackageNotFoundError(name)
+2025-06-11T05:57:48.114395329Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T05:57:48.114398707Z ]
+2025-06-11T05:57:48.114401974Z 
 
-WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T05:58:05.434600602Z    _____                               
+2025-06-11T05:58:05.434743283Z   /  _  \ __________ _________   ____  
+2025-06-11T05:58:05.434748335Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T05:58:05.434752053Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T05:58:05.434755532Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T05:58:05.434759258Z         \/      \/                  \/ 
+2025-06-11T05:58:05.434762893Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T05:58:05.434766207Z 
+2025-06-11T05:58:05.434769375Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T05:58:05.434780103Z Python 3.9.22
+2025-06-11T05:58:05.434784011Z Note: Any data outside '/home' is not persisted
+2025-06-11T05:58:05.438539901Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T05:58:05.445980154Z Updating certificates in /etc/ssl/certs...
+2025-06-11T05:58:07.437079827Z 3 added, 0 removed; done.
+2025-06-11T05:58:07.437108718Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T05:58:07.439386470Z done.
+2025-06-11T05:58:07.447292753Z CA certificates copied and updated successfully.
+2025-06-11T05:58:07.471544464Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T05:58:07.556217452Z Starting periodic command scheduler: cron.
+2025-06-11T05:58:07.557494367Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T05:58:07.563304772Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T05:58:07.563340731Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T05:58:07.564861433Z Build Operation ID: bbec74a9-8f27-401f-88b5-d9ca671a3ecd
+2025-06-11T05:58:08.653436078Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T05:58:08.916565542Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T05:58:09.184657194Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T05:58:09.184686634Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T05:58:11.342919327Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T05:58:11.342960704Z 
+2025-06-11T05:58:11.342993660Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T05:58:11.342998583Z 
+2025-06-11T05:58:11.343001853Z [Traceback (most recent call last):
+2025-06-11T05:58:11.343005782Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T05:58:11.343022471Z     return load_entry_point(dist, section, name)
+2025-06-11T05:58:11.343024826Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T05:58:11.343027146Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T05:58:11.343029823Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T05:58:11.343032258Z     return Distribution.from_name(distribution_name)
+2025-06-11T05:58:11.343034540Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T05:58:11.343036734Z     raise PackageNotFoundError(name)
+2025-06-11T05:58:11.343038897Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T05:58:11.343041051Z ]
+2025-06-11T05:58:11.343043392Z 
 
-  Ok
-2025-06-11T06:08:04.5881359
+2025-06-11T05:58:29.767460175Z    _____                               
+2025-06-11T05:58:29.767501449Z   /  _  \ __________ _________   ____  
+2025-06-11T05:58:29.767506223Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T05:58:29.767510260Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T05:58:29.767514156Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T05:58:29.767517775Z         \/      \/                  \/ 
+2025-06-11T05:58:29.767521272Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T05:58:29.767524783Z 
+2025-06-11T05:58:29.767527934Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T05:58:29.767531379Z Python 3.9.22
+2025-06-11T05:58:29.767535009Z Note: Any data outside '/home' is not persisted
+2025-06-11T05:58:29.771540813Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T05:58:29.782371466Z Updating certificates in /etc/ssl/certs...
+2025-06-11T05:58:31.081083235Z 3 added, 0 removed; done.
+2025-06-11T05:58:31.081110911Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T05:58:31.082416414Z done.
+2025-06-11T05:58:31.085412362Z CA certificates copied and updated successfully.
+2025-06-11T05:58:31.101572978Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T05:58:31.132740244Z Starting periodic command scheduler: cron.
+2025-06-11T05:58:31.133038461Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T05:58:31.139078490Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T05:58:31.139099304Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T05:58:31.139163312Z Build Operation ID: 6a093467-7c9c-44fb-85cc-e7ee381de0b5
+2025-06-11T05:58:32.239517221Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T05:58:32.502922211Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T05:58:32.776609560Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T05:58:32.776639743Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T05:58:35.141315405Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T05:58:35.141351831Z 
+2025-06-11T05:58:35.141385243Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T05:58:35.141390029Z 
+2025-06-11T05:58:35.141393411Z [Traceback (most recent call last):
+2025-06-11T05:58:35.141397376Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T05:58:35.141420548Z     return load_entry_point(dist, section, name)
+2025-06-11T05:58:35.141424224Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T05:58:35.141426814Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T05:58:35.141428920Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T05:58:35.141431217Z     return Distribution.from_name(distribution_name)
+2025-06-11T05:58:35.141433293Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T05:58:35.141435671Z     raise PackageNotFoundError(name)
+2025-06-11T05:58:35.141437715Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T05:58:35.141439963Z ]
+2025-06-11T05:58:35.141441911Z 
 
-Updating certificates in /etc/ssl/certs...
+2025-06-11T05:59:01.464921986Z    _____                               
+2025-06-11T05:59:01.466111058Z   /  _  \ __________ _________   ____  
+2025-06-11T05:59:01.466124442Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T05:59:01.466128653Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T05:59:01.466132489Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T05:59:01.466136565Z         \/      \/                  \/ 
+2025-06-11T05:59:01.466140664Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T05:59:01.466144365Z 
+2025-06-11T05:59:01.466147925Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T05:59:01.466151590Z Python 3.9.22
+2025-06-11T05:59:01.466155137Z Note: Any data outside '/home' is not persisted
+2025-06-11T05:59:01.472868783Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T05:59:01.479924663Z Updating certificates in /etc/ssl/certs...
+2025-06-11T05:59:02.983056328Z 3 added, 0 removed; done.
+2025-06-11T05:59:02.985161498Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T05:59:02.987410960Z done.
+2025-06-11T05:59:02.991500023Z CA certificates copied and updated successfully.
+2025-06-11T05:59:03.032286851Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T05:59:03.299979587Z Starting periodic command scheduler: cron.
+2025-06-11T05:59:03.300490782Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T05:59:03.308400124Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T05:59:03.308693472Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T05:59:03.311136515Z Build Operation ID: b57d88b0-0327-4c5f-b839-8e7b98394af4
+2025-06-11T05:59:04.417529745Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T05:59:04.693419609Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T05:59:04.968066719Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T05:59:04.968103703Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T05:59:07.373004170Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T05:59:07.373041474Z 
+2025-06-11T05:59:07.373081908Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T05:59:07.373087392Z 
+2025-06-11T05:59:07.373092033Z [Traceback (most recent call last):
+2025-06-11T05:59:07.373097168Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T05:59:07.373123932Z     return load_entry_point(dist, section, name)
+2025-06-11T05:59:07.373129095Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T05:59:07.373134292Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T05:59:07.373139351Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T05:59:07.373144369Z     return Distribution.from_name(distribution_name)
+2025-06-11T05:59:07.373149272Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T05:59:07.373153854Z     raise PackageNotFoundError(name)
+2025-06-11T05:59:07.373157883Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T05:59:07.373162332Z ]
+2025-06-11T05:59:07.373166303Z 
 
-  Ok
-2025-06-11T06:08:05.7316146
+2025-06-11T06:01:22.339497476Z    _____                               
+2025-06-11T06:01:22.339663868Z   /  _  \ __________ _________   ____  
+2025-06-11T06:01:22.339680205Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:01:22.339684987Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:01:22.339689092Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:01:22.339692827Z         \/      \/                  \/ 
+2025-06-11T06:01:22.339696672Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:01:22.339700393Z 
+2025-06-11T06:01:22.339703950Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:01:22.339707048Z Python 3.9.22
+2025-06-11T06:01:22.339710318Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:01:22.343843775Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:01:22.353156478Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:01:23.796658698Z 3 added, 0 removed; done.
+2025-06-11T06:01:23.796685105Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:01:23.798351003Z done.
+2025-06-11T06:01:23.801078483Z CA certificates copied and updated successfully.
+2025-06-11T06:01:23.895689182Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:01:23.927241501Z Starting periodic command scheduler: cron.
+2025-06-11T06:01:23.927457760Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:01:23.933526182Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:01:23.933558208Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:01:23.933564040Z Build Operation ID: 229a914e-d19c-48e7-9052-0e542dcf45d9
+2025-06-11T06:01:25.039283968Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:01:25.297817686Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:01:25.565391239Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:01:25.565421318Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:01:27.804600725Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:01:27.804622535Z 
+2025-06-11T06:01:27.804662405Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:01:27.804667625Z 
+2025-06-11T06:01:27.804671292Z [Traceback (most recent call last):
+2025-06-11T06:01:27.804675429Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:01:27.804699635Z     return load_entry_point(dist, section, name)
+2025-06-11T06:01:27.804704707Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:01:27.804709500Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:01:27.804715698Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:01:27.804721939Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:01:27.804730714Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:01:27.804735119Z     raise PackageNotFoundError(name)
+2025-06-11T06:01:27.804738982Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:01:27.804743120Z ]
+2025-06-11T06:01:27.804747090Z 
 
-3 added, 0 removed; done.
-
-  Ok
-2025-06-11T06:08:05.7317426
-
-Running hooks in /etc/ca-certificates/update.d...
-
-  Ok
-2025-06-11T06:08:05.7331485
-
-done.
-
-  Ok
-2025-06-11T06:08:05.7362787
-
-CA certificates copied and updated successfully.
-
-  Ok
-2025-06-11T06:08:05.8582026
-
-Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
-
-  Ok
-2025-06-11T06:08:05.9007603
-
-Starting periodic command scheduler: cron.
-
-  Ok
-2025-06-11T06:08:05.900965
-
-Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
-
-  Ok
-2025-06-11T06:08:05.9057385
-
-Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
-
-  Ok
-2025-06-11T06:08:05.9059514
-
-Could not find operation ID in manifest. Generating an operation id...
-
-  Ok
-2025-06-11T06:08:05.9061211
-
-Build Operation ID: 62347040-3b00-4874-8dcf-0946f1f0a6b0
-
-  Ok
-2025-06-11T06:08:06.9657598
-
-Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
-
-  Ok
-2025-06-11T06:08:07.2235222
-
-Writing output script to '/opt/startup/startup.sh'
-
-  Ok
-2025-06-11T06:08:07.487856
-
-WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
-
-  Ok
-2025-06-11T06:08:07.4879349
-
-WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
-
-  Ok
-2025-06-11T06:08:10.5011294
-
-  Ok
-2025-06-11T06:08:10.5012485
-
-Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
-
-  Ok
-2025-06-11T06:08:10.5012644
-
-  Ok
-2025-06-11T06:08:10.5012703
-
-[Traceback (most recent call last):
-
-  Ok
-2025-06-11T06:08:10.5012764
-
-  File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
-
-  Ok
-2025-06-11T06:08:10.5012868
-
-    return load_entry_point(dist, section, name)
-
-  Ok
-2025-06-11T06:08:10.5012924
-
-  File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
-
-  Ok
-2025-06-11T06:08:10.501298
-
-    dist_obj = importlib_metadata.distribution(distribution)
-
-  Ok
-2025-06-11T06:08:10.5013036
-
-  File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
-
-  Ok
-2025-06-11T06:08:10.5013107
-
-    return Distribution.from_name(distribution_name)
-
-  Ok
-2025-06-11T06:08:10.5013161
-
-  File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
-
-  Ok
-2025-06-11T06:08:10.5013213
-
-    raise PackageNotFoundError(name)
-
-  Ok
-2025-06-11T06:08:10.5013262
-
-importlib.metadata.PackageNotFoundError: meinheld
-
-  Ok
-2025-06-11T06:08:10.501333
-
-]
-
-  Ok
-2025-06-11T06:08:10.5023784
-
-  Ok
-2025-06-11T06:08:10.5029747
-
-{"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:03:57.2368225Z    _____                               
+2025-06-11T06:03:57.2370463Z   /  _  \ __________ _________   ____  
+2025-06-11T06:03:57.2370747Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:03:57.2370835Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:03:57.2370911Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:03:57.2371015Z         \/      \/                  \/ 
+2025-06-11T06:03:57.2371110Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:03:57.2371185Z 
+2025-06-11T06:03:57.2371805Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:03:57.2371882Z Python 3.9.22
+2025-06-11T06:03:57.2371925Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:03:57.2371975Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:03:57.2405987Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:03:58.8270904Z 3 added, 0 removed; done.
+2025-06-11T06:03:58.8273012Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:03:58.8273209Z done.
+2025-06-11T06:03:58.8273292Z CA certificates copied and updated successfully.
+2025-06-11T06:03:58.8273412Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:03:58.8273703Z Starting periodic command scheduler: cron.
+2025-06-11T06:03:58.8273797Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:03:58.8273904Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:03:58.8273985Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:03:58.8274051Z Build Operation ID: b6cb042d-a56b-418a-8ef5-c1265f72a6ca
+2025-06-11T06:03:59.9465343Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:04:00.4206997Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:04:01.1157448Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:04:01.1158558Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:04:03.3638334Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:04:03.3638372Z 
+2025-06-11T06:04:03.3639098Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:04:03.3639280Z 
+2025-06-11T06:04:03.3639381Z [Traceback (most recent call last):
+2025-06-11T06:04:03.3639470Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:04:03.3639540Z     return load_entry_point(dist, section, name)
+2025-06-11T06:04:03.3639597Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:04:03.3639678Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:04:03.3639739Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:04:03.3639806Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:04:03.3639883Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:04:03.3639947Z     raise PackageNotFoundError(name)
+2025-06-11T06:04:03.3640006Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:04:03.3640061Z ]
+2025-06-11T06:04:03.3640137Z 
+2025-06-11T06:04:19.8101243Z    _____                               
+2025-06-11T06:04:19.8101763Z   /  _  \ __________ _________   ____  
+2025-06-11T06:04:19.8101908Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:04:19.8101995Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:04:19.8102053Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:04:19.8102146Z         \/      \/                  \/ 
+2025-06-11T06:04:19.8102202Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:04:19.8102258Z 
+2025-06-11T06:04:19.8102326Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:04:19.8102373Z Python 3.9.22
+2025-06-11T06:04:19.8102425Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:04:19.8175805Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:04:19.8379920Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:04:21.8350828Z 3 added, 0 removed; done.
+2025-06-11T06:04:21.8351228Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:04:21.8351294Z done.
+2025-06-11T06:04:21.8351381Z CA certificates copied and updated successfully.
+2025-06-11T06:04:21.8351443Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:04:21.8351540Z Starting periodic command scheduler: cron.
+2025-06-11T06:04:21.8351609Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:04:21.8351692Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:04:21.8351752Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:04:21.8351801Z Build Operation ID: 2059d168-a9da-43c2-bad1-13fbe726d976
+2025-06-11T06:04:22.4424231Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:04:22.8328863Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:04:22.9922023Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:04:22.9922686Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:04:25.5658449Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:04:25.5658587Z 
+2025-06-11T06:04:25.5659418Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:04:25.5659596Z 
+2025-06-11T06:04:25.5659660Z [Traceback (most recent call last):
+2025-06-11T06:04:25.5659724Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:04:25.5659828Z     return load_entry_point(dist, section, name)
+2025-06-11T06:04:25.5659897Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:04:25.5659962Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:04:25.5660026Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:04:25.5660112Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:04:25.5660177Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:04:25.5660242Z     raise PackageNotFoundError(name)
+2025-06-11T06:04:25.5660305Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:04:25.5660386Z ]
+2025-06-11T06:04:25.5660442Z 
+2025-06-11T06:04:38.6173673Z    _____                               
+2025-06-11T06:04:38.6174217Z   /  _  \ __________ _________   ____  
+2025-06-11T06:04:38.6174325Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:04:38.6174386Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:04:38.6174470Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:04:38.6174538Z         \/      \/                  \/ 
+2025-06-11T06:04:38.6174589Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:04:38.6174643Z 
+2025-06-11T06:04:38.6174692Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:04:38.6174760Z Python 3.9.22
+2025-06-11T06:04:38.6174810Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:04:38.6263932Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:04:38.6331175Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:04:39.7565874Z 3 added, 0 removed; done.
+2025-06-11T06:04:39.7566772Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:04:39.7582234Z done.
+2025-06-11T06:04:39.7618280Z CA certificates copied and updated successfully.
+2025-06-11T06:04:39.7842272Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:04:40.7505771Z Starting periodic command scheduler: cron.
+2025-06-11T06:04:40.7506393Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:04:40.7506521Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:04:40.7506643Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:04:40.7506687Z Build Operation ID: a11d2503-9f88-4fcd-be82-50c77b137392
+2025-06-11T06:04:40.9641565Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:04:41.2270450Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:04:41.5027171Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:04:41.5027835Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:04:44.1880206Z 
+2025-06-11T06:04:44.1880915Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:04:44.1880961Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:04:44.1881080Z 
+2025-06-11T06:04:44.1881136Z [Traceback (most recent call last):
+2025-06-11T06:04:44.1881185Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:04:44.1881267Z     return load_entry_point(dist, section, name)
+2025-06-11T06:04:44.1881317Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:04:44.1881375Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:04:44.1881428Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:04:44.1881482Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:04:44.1881517Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:04:44.1881552Z     raise PackageNotFoundError(name)
+2025-06-11T06:04:44.1881585Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:04:44.1881629Z ]
+2025-06-11T06:04:44.1881745Z 
+2025-06-11T06:05:00.4917801Z    _____                               
+2025-06-11T06:05:00.4918278Z   /  _  \ __________ _________   ____  
+2025-06-11T06:05:00.4918365Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:05:00.4918434Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:05:00.4918470Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:05:00.4918537Z         \/      \/                  \/ 
+2025-06-11T06:05:00.4918571Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:05:00.4918607Z 
+2025-06-11T06:05:00.4918655Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:05:00.4918686Z Python 3.9.22
+2025-06-11T06:05:00.4918716Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:05:00.4974170Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:05:00.5079040Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:05:01.7944740Z 3 added, 0 removed; done.
+2025-06-11T06:05:01.7957118Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:05:01.7990084Z done.
+2025-06-11T06:05:01.8051450Z CA certificates copied and updated successfully.
+2025-06-11T06:05:01.8292418Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:05:01.8664620Z Starting periodic command scheduler: cron.
+2025-06-11T06:05:01.8665670Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:05:01.8717739Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:05:01.8718527Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:05:01.8718607Z Build Operation ID: 12465a4c-6fbc-4287-a28d-c1c29be0a5aa
+2025-06-11T06:05:02.8168772Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:05:02.8883980Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:05:02.9191938Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:05:02.9192996Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:05:05.5502726Z 
+2025-06-11T06:05:05.5503549Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:05:05.5503673Z 
+2025-06-11T06:05:05.5503727Z [Traceback (most recent call last):
+2025-06-11T06:05:05.5503785Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:05:05.5503922Z     return load_entry_point(dist, section, name)
+2025-06-11T06:05:05.5503980Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:05:05.5504037Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:05:05.5504089Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:05:05.5504196Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:05:05.5504250Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:05:05.5504302Z     raise PackageNotFoundError(name)
+2025-06-11T06:05:05.5504353Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:05:05.5504456Z ]
+2025-06-11T06:05:05.5504504Z 
+2025-06-11T06:05:05.5504975Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:05:22.2661215Z    _____                               
+2025-06-11T06:05:22.2661767Z   /  _  \ __________ _________   ____  
+2025-06-11T06:05:22.2661856Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:05:22.2661908Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:05:22.2661960Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:05:22.2662044Z         \/      \/                  \/ 
+2025-06-11T06:05:22.2662092Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:05:22.2662142Z 
+2025-06-11T06:05:22.2662188Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:05:22.2662232Z Python 3.9.22
+2025-06-11T06:05:22.2662295Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:05:22.2735930Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:05:22.2796841Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:05:23.4597244Z 3 added, 0 removed; done.
+2025-06-11T06:05:23.4598072Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:05:23.4612968Z done.
+2025-06-11T06:05:23.4643596Z CA certificates copied and updated successfully.
+2025-06-11T06:05:23.4848247Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:05:23.5156959Z Starting periodic command scheduler: cron.
+2025-06-11T06:05:23.5158697Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:05:23.5219876Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:05:23.5220497Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:05:23.5220619Z Build Operation ID: 2c42f0a9-6c49-4a1c-9ae2-536dcaa4d77c
+2025-06-11T06:05:24.6256810Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:05:25.2689364Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:05:25.2689858Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:05:25.2689973Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:05:27.3703360Z 
+2025-06-11T06:05:27.3703596Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:05:27.3704198Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:05:27.3704327Z 
+2025-06-11T06:05:27.3704376Z [Traceback (most recent call last):
+2025-06-11T06:05:27.3704508Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:05:27.3704582Z     return load_entry_point(dist, section, name)
+2025-06-11T06:05:27.3704636Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:05:27.3704699Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:05:27.3704778Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:05:27.3704841Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:05:27.3704907Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:05:27.3704956Z     raise PackageNotFoundError(name)
+2025-06-11T06:05:27.3705002Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:05:27.3705062Z ]
+2025-06-11T06:05:27.3705107Z 
+2025-06-11T06:05:36.5287891Z    _____                               
+2025-06-11T06:05:36.5288410Z   /  _  \ __________ _________   ____  
+2025-06-11T06:05:36.5288485Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:05:36.5288523Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:05:36.5288589Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:05:36.5288638Z         \/      \/                  \/ 
+2025-06-11T06:05:36.5288680Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:05:36.5288732Z 
+2025-06-11T06:05:36.5288779Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:05:36.5288842Z Python 3.9.22
+2025-06-11T06:05:36.5288893Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:05:36.5288937Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:05:36.5385393Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:05:37.6776033Z 3 added, 0 removed; done.
+2025-06-11T06:05:37.6777316Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:05:37.6795817Z done.
+2025-06-11T06:05:37.6832625Z CA certificates copied and updated successfully.
+2025-06-11T06:05:37.7013938Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:05:37.7467139Z Starting periodic command scheduler: cron.
+2025-06-11T06:05:37.7475257Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:05:37.7528239Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:05:37.7528995Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:05:37.7529287Z Build Operation ID: de885a7d-36f9-4555-abd2-f736dca5faae
+2025-06-11T06:05:38.8806794Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:05:39.1481889Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:05:39.4235430Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:05:39.4241717Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:05:42.3553233Z 
+2025-06-11T06:05:42.3554352Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:05:42.3554527Z 
+2025-06-11T06:05:42.3554576Z [Traceback (most recent call last):
+2025-06-11T06:05:42.3554629Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:05:42.3554722Z     return load_entry_point(dist, section, name)
+2025-06-11T06:05:42.3554782Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:05:42.3554842Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:05:42.3554894Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:05:42.3554964Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:05:42.3555024Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:05:42.3555075Z     raise PackageNotFoundError(name)
+2025-06-11T06:05:42.3555124Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:05:42.3555187Z ]
+2025-06-11T06:05:42.3555232Z 
+2025-06-11T06:05:42.3562299Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:06:00.8197596Z    _____                               
+2025-06-11T06:06:00.8198192Z   /  _  \ __________ _________   ____  
+2025-06-11T06:06:00.8198292Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:06:00.8198347Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:06:00.8198400Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:06:00.8198468Z         \/      \/                  \/ 
+2025-06-11T06:06:00.8198544Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:06:00.8198600Z 
+2025-06-11T06:06:00.8198655Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:06:00.8198707Z Python 3.9.22
+2025-06-11T06:06:00.8198908Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:06:00.8261458Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:06:00.8375489Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:06:02.3358968Z 3 added, 0 removed; done.
+2025-06-11T06:06:02.3359862Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:06:02.3382971Z done.
+2025-06-11T06:06:02.3468384Z CA certificates copied and updated successfully.
+2025-06-11T06:06:02.3643749Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:06:02.4073186Z Starting periodic command scheduler: cron.
+2025-06-11T06:06:02.4077126Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:06:02.4119460Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:06:02.4120572Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:06:02.4120681Z Build Operation ID: 266bd254-1022-40ee-a6af-309d12c92279
+2025-06-11T06:06:03.4997377Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:06:03.7621462Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:06:04.0378782Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:06:04.0379591Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:06:06.6491130Z 
+2025-06-11T06:06:06.6491138Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:06:06.6492038Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:06:06.6492177Z 
+2025-06-11T06:06:06.6492233Z [Traceback (most recent call last):
+2025-06-11T06:06:06.6492300Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:06:06.6493954Z     return load_entry_point(dist, section, name)
+2025-06-11T06:06:06.6494124Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:06:06.6494200Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:06:06.6494272Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:06:06.6494377Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:06:06.6494447Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:06:06.6494513Z     raise PackageNotFoundError(name)
+2025-06-11T06:06:06.6494579Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:06:06.6494666Z ]
+2025-06-11T06:06:06.6494725Z 
+2025-06-11T06:06:24.3044272Z    _____                               
+2025-06-11T06:06:24.3045263Z   /  _  \ __________ _________   ____  
+2025-06-11T06:06:24.3045704Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:06:24.3045791Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:06:24.3045845Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:06:24.3045910Z         \/      \/                  \/ 
+2025-06-11T06:06:24.3045961Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:06:24.3046036Z 
+2025-06-11T06:06:24.3046084Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:06:24.3046135Z Python 3.9.22
+2025-06-11T06:06:24.3046184Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:06:24.3046231Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:06:24.3046293Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:06:25.0853796Z 3 added, 0 removed; done.
+2025-06-11T06:06:25.0862815Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:06:25.0863171Z done.
+2025-06-11T06:06:25.0863274Z CA certificates copied and updated successfully.
+2025-06-11T06:06:25.0863355Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:06:25.0863459Z Starting periodic command scheduler: cron.
+2025-06-11T06:06:25.0863548Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:06:25.0863618Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:06:25.0863679Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:06:25.0863732Z Build Operation ID: 39941d00-39b2-479a-8923-fd2851e15de3
+2025-06-11T06:06:26.2056967Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:06:26.4712240Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:06:26.7774148Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:06:26.7774818Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:06:29.2837745Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:06:29.2837757Z 
+2025-06-11T06:06:29.2839324Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:06:29.2839612Z 
+2025-06-11T06:06:29.2839700Z [Traceback (most recent call last):
+2025-06-11T06:06:29.2839780Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:06:29.2839914Z     return load_entry_point(dist, section, name)
+2025-06-11T06:06:29.2839981Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:06:29.2840116Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:06:29.2840194Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:06:29.2840286Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:06:29.2840367Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:06:29.2840427Z     raise PackageNotFoundError(name)
+2025-06-11T06:06:29.2840486Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:06:29.2840578Z ]
+2025-06-11T06:06:29.2840631Z 
+2025-06-11T06:06:53.0291970Z    _____                               
+2025-06-11T06:06:53.0292577Z   /  _  \ __________ _________   ____  
+2025-06-11T06:06:53.0292667Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:06:53.0292723Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:06:53.0292780Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:06:53.0292844Z         \/      \/                  \/ 
+2025-06-11T06:06:53.0292920Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:06:53.0292969Z 
+2025-06-11T06:06:53.0293017Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:06:53.0293067Z Python 3.9.22
+2025-06-11T06:06:53.0293120Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:06:53.0324538Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:06:53.0563416Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:06:54.1952965Z 3 added, 0 removed; done.
+2025-06-11T06:06:54.3331559Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:06:54.3331919Z done.
+2025-06-11T06:06:54.3331995Z CA certificates copied and updated successfully.
+2025-06-11T06:06:54.3332039Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:06:54.3332116Z Starting periodic command scheduler: cron.
+2025-06-11T06:06:54.3332159Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:06:54.3332218Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:06:54.3332258Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:06:54.3332289Z Build Operation ID: 1da631b7-c9de-470c-98cd-3fe43b9998a0
+2025-06-11T06:06:55.3471967Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:06:55.6114040Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:06:55.8789182Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:06:55.8790136Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:06:58.0566722Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:06:58.0566723Z 
+2025-06-11T06:06:58.0567435Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:06:58.0567607Z 
+2025-06-11T06:06:58.0567667Z [Traceback (most recent call last):
+2025-06-11T06:06:58.0567729Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:06:58.0567837Z     return load_entry_point(dist, section, name)
+2025-06-11T06:06:58.0567900Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:06:58.0567961Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:06:58.0568028Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:06:58.0568117Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:06:58.0568180Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:06:58.0568250Z     raise PackageNotFoundError(name)
+2025-06-11T06:06:58.0568314Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:06:58.0568392Z ]
+2025-06-11T06:06:58.0568446Z 
+2025-06-11T06:07:11.0714666Z    _____                               
+2025-06-11T06:07:11.0715171Z   /  _  \ __________ _________   ____  
+2025-06-11T06:07:11.0715269Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:07:11.0715329Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:07:11.0715412Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:07:11.0715583Z         \/      \/                  \/ 
+2025-06-11T06:07:11.0715635Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:07:11.0715681Z 
+2025-06-11T06:07:11.0715728Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:07:11.0715790Z Python 3.9.22
+2025-06-11T06:07:11.0715834Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:07:11.0715886Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:07:11.0849877Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:07:12.1935637Z 3 added, 0 removed; done.
+2025-06-11T06:07:12.1936630Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:07:12.2097690Z done.
+2025-06-11T06:07:12.2126391Z CA certificates copied and updated successfully.
+2025-06-11T06:07:12.2254157Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:07:12.3770776Z Starting periodic command scheduler: cron.
+2025-06-11T06:07:12.3772289Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:07:12.3830632Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:07:12.3832267Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:07:12.3840157Z Build Operation ID: 42341b05-6576-43ad-85cb-5799c3eda714
+2025-06-11T06:07:13.4792636Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:07:15.3043226Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:07:15.3043640Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:07:15.3043708Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:07:16.2408025Z 
+2025-06-11T06:07:16.2408137Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:07:16.2408648Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:07:16.2408761Z 
+2025-06-11T06:07:16.2408798Z [Traceback (most recent call last):
+2025-06-11T06:07:16.2408834Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:07:16.2408920Z     return load_entry_point(dist, section, name)
+2025-06-11T06:07:16.2408974Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:07:16.2409028Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:07:16.2409076Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:07:16.2409143Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:07:16.2409189Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:07:16.2409234Z     raise PackageNotFoundError(name)
+2025-06-11T06:07:16.2409278Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:07:16.2409342Z ]
+2025-06-11T06:07:16.2409382Z 
+2025-06-11T06:07:30.5371351Z    _____                               
+2025-06-11T06:07:30.5371893Z   /  _  \ __________ _________   ____  
+2025-06-11T06:07:30.5371958Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:07:30.5371997Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:07:30.5372064Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:07:30.5372115Z         \/      \/                  \/ 
+2025-06-11T06:07:30.5372148Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:07:30.5372182Z 
+2025-06-11T06:07:30.5372213Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:07:30.5372258Z Python 3.9.22
+2025-06-11T06:07:30.5372290Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:07:30.5372326Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:07:30.5372357Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:07:31.1264500Z 3 added, 0 removed; done.
+2025-06-11T06:07:31.1265308Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:07:31.1288341Z done.
+2025-06-11T06:07:31.1319693Z CA certificates copied and updated successfully.
+2025-06-11T06:07:31.1510212Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:07:31.2375336Z Starting periodic command scheduler: cron.
+2025-06-11T06:07:31.2376027Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:07:31.2376183Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:07:31.2376329Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:07:31.2376384Z Build Operation ID: e267636e-ecc9-4119-8ba8-560254990996
+2025-06-11T06:07:32.3242584Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:07:32.5831743Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:07:32.8727991Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:07:32.8733190Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:07:35.6326057Z 
+2025-06-11T06:07:35.6326098Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:07:35.6326842Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:07:35.6326977Z 
+2025-06-11T06:07:35.6327025Z [Traceback (most recent call last):
+2025-06-11T06:07:35.6327075Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:07:35.6327188Z     return load_entry_point(dist, section, name)
+2025-06-11T06:07:35.6327245Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:07:35.6327324Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:07:35.6327393Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:07:35.6327445Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:07:35.6327493Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:07:35.6327540Z     raise PackageNotFoundError(name)
+2025-06-11T06:07:35.6327614Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:07:35.6327663Z ]
+2025-06-11T06:07:35.6327709Z 
+2025-06-11T06:07:47.4353149Z    _____                               
+2025-06-11T06:07:47.4353711Z   /  _  \ __________ _________   ____  
+2025-06-11T06:07:47.4353820Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:07:47.4353883Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:07:47.4353938Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:07:47.4354034Z         \/      \/                  \/ 
+2025-06-11T06:07:47.4354092Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:07:47.4354145Z 
+2025-06-11T06:07:47.4354196Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:07:47.4354243Z Python 3.9.22
+2025-06-11T06:07:47.4354316Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:07:47.4426026Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:07:47.4551868Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:07:48.9421182Z 3 added, 0 removed; done.
+2025-06-11T06:07:48.9435754Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:07:48.9462589Z done.
+2025-06-11T06:07:48.9513995Z CA certificates copied and updated successfully.
+2025-06-11T06:07:48.9686216Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:07:49.0167084Z Starting periodic command scheduler: cron.
+2025-06-11T06:07:49.0209255Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:07:49.0290647Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:07:49.0293479Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:07:49.0318876Z Build Operation ID: d765f866-5597-43d4-81e6-a83379156e11
+2025-06-11T06:07:50.1220842Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:07:50.3813541Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:07:50.6600344Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:07:50.6601191Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:07:52.9765718Z 
+2025-06-11T06:07:52.9765790Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:07:52.9766454Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:07:52.9766572Z 
+2025-06-11T06:07:52.9766621Z [Traceback (most recent call last):
+2025-06-11T06:07:52.9766674Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:07:52.9766752Z     return load_entry_point(dist, section, name)
+2025-06-11T06:07:52.9766804Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:07:52.9766860Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:07:52.9766908Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:07:52.9766973Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:07:52.9767018Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:07:52.9767067Z     raise PackageNotFoundError(name)
+2025-06-11T06:07:52.9767111Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:07:52.9767179Z ]
+2025-06-11T06:07:52.9767222Z 
+2025-06-11T06:08:04.5435809Z    _____                               
+2025-06-11T06:08:04.5436314Z   /  _  \ __________ _________   ____  
+2025-06-11T06:08:04.5436420Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:08:04.5436486Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:08:04.5436577Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:08:04.5436654Z         \/      \/                  \/ 
+2025-06-11T06:08:04.5436708Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:08:04.5436766Z 
+2025-06-11T06:08:04.5436818Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:08:04.5436887Z Python 3.9.22
+2025-06-11T06:08:04.5436941Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:08:04.5774602Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:08:04.5881359Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:08:05.7316146Z 3 added, 0 removed; done.
+2025-06-11T06:08:05.7317426Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:08:05.7331485Z done.
+2025-06-11T06:08:05.7362787Z CA certificates copied and updated successfully.
+2025-06-11T06:08:05.8582026Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:08:05.9007603Z Starting periodic command scheduler: cron.
+2025-06-11T06:08:05.9009650Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:08:05.9057385Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:08:05.9059514Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:08:05.9061211Z Build Operation ID: 62347040-3b00-4874-8dcf-0946f1f0a6b0
+2025-06-11T06:08:06.9657598Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:08:07.2235222Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:08:07.4878560Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:08:07.4879349Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:08:10.5011294Z 
+2025-06-11T06:08:10.5012485Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:08:10.5012644Z 
+2025-06-11T06:08:10.5012703Z [Traceback (most recent call last):
+2025-06-11T06:08:10.5012764Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:08:10.5012868Z     return load_entry_point(dist, section, name)
+2025-06-11T06:08:10.5012924Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:08:10.5012980Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:08:10.5013036Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:08:10.5013107Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:08:10.5013161Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:08:10.5013213Z     raise PackageNotFoundError(name)
+2025-06-11T06:08:10.5013262Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:08:10.5013330Z ]
+2025-06-11T06:08:10.5023784Z 
+2025-06-11T06:08:10.5029747Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:08:30.3921168Z    _____                               
+2025-06-11T06:08:30.3923559Z   /  _  \ __________ _________   ____  
+2025-06-11T06:08:30.3923743Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:08:30.3924110Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:08:30.3924171Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:08:30.3924221Z         \/      \/                  \/ 
+2025-06-11T06:08:30.3924254Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:08:30.3924291Z 
+2025-06-11T06:08:30.3924342Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:08:30.3924373Z Python 3.9.22
+2025-06-11T06:08:30.3924404Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:08:30.4000875Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:08:30.4212802Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:08:31.8780145Z 3 added, 0 removed; done.
+2025-06-11T06:08:31.8780963Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:08:31.8781065Z done.
+2025-06-11T06:08:31.8781127Z CA certificates copied and updated successfully.
+2025-06-11T06:08:31.8781245Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:08:32.2728502Z Starting periodic command scheduler: cron.
+2025-06-11T06:08:32.2729703Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:08:32.2772129Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:08:32.2773904Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:08:32.2775492Z Build Operation ID: aa2758d7-03d9-48d7-a5d4-e23f09293a0d
+2025-06-11T06:08:33.3900792Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:08:33.6533811Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:08:33.9214366Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:08:33.9215134Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:08:36.1593836Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:08:36.1593913Z 
+2025-06-11T06:08:36.1594573Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:08:36.1594695Z 
+2025-06-11T06:08:36.1594744Z [Traceback (most recent call last):
+2025-06-11T06:08:36.1594805Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:08:36.1594885Z     return load_entry_point(dist, section, name)
+2025-06-11T06:08:36.1594941Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:08:36.1594998Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:08:36.1595047Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:08:36.1595119Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:08:36.1595165Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:08:36.1595212Z     raise PackageNotFoundError(name)
+2025-06-11T06:08:36.1595255Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:08:36.1595315Z ]
+2025-06-11T06:08:36.1595356Z 
+2025-06-11T06:08:46.5170077Z    _____                               
+2025-06-11T06:08:46.5170643Z   /  _  \ __________ _________   ____  
+2025-06-11T06:08:46.5170749Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:08:46.5170809Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:08:46.5170870Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:08:46.5170954Z         \/      \/                  \/ 
+2025-06-11T06:08:46.5171002Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:08:46.5171052Z 
+2025-06-11T06:08:46.5171100Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:08:46.5171146Z Python 3.9.22
+2025-06-11T06:08:46.5171218Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:08:46.5222366Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:08:46.5316784Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:08:47.6825700Z 3 added, 0 removed; done.
+2025-06-11T06:08:47.6826688Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:08:47.6847052Z done.
+2025-06-11T06:08:47.6881096Z CA certificates copied and updated successfully.
+2025-06-11T06:08:47.7020158Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:08:47.7390858Z Starting periodic command scheduler: cron.
+2025-06-11T06:08:47.7404864Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:08:47.7467597Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:08:47.7476964Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:08:47.7477731Z Build Operation ID: f48912ac-1f0b-447a-8354-a3d1de682fde
+2025-06-11T06:08:48.8124146Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:08:49.0711639Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:08:49.3627849Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:08:49.3628491Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:08:52.0738966Z 
+2025-06-11T06:08:52.0739785Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:08:52.0739928Z 
+2025-06-11T06:08:52.0739990Z [Traceback (most recent call last):
+2025-06-11T06:08:52.0740049Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:08:52.0740141Z     return load_entry_point(dist, section, name)
+2025-06-11T06:08:52.0740203Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:08:52.0740268Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:08:52.0740336Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:08:52.0740418Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:08:52.0740481Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:08:52.0740544Z     raise PackageNotFoundError(name)
+2025-06-11T06:08:52.0740601Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:08:52.0740677Z ]
+2025-06-11T06:08:52.0740729Z 
+2025-06-11T06:08:52.0741699Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:09:01.1825137Z    _____                               
+2025-06-11T06:09:01.1825764Z   /  _  \ __________ _________   ____  
+2025-06-11T06:09:01.1825858Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:09:01.1825955Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:09:01.1826013Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:09:01.1826079Z         \/      \/                  \/ 
+2025-06-11T06:09:01.1826133Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:09:01.1826191Z 
+2025-06-11T06:09:01.1826259Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:09:01.1826306Z Python 3.9.22
+2025-06-11T06:09:01.1826351Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:09:01.1854892Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:09:01.1938943Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:09:02.4193296Z 3 added, 0 removed; done.
+2025-06-11T06:09:02.4194362Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:09:02.4212426Z done.
+2025-06-11T06:09:02.4251041Z CA certificates copied and updated successfully.
+2025-06-11T06:09:02.4408653Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:09:02.5087293Z Starting periodic command scheduler: cron.
+2025-06-11T06:09:02.5098395Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:09:02.5154910Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:09:02.5163406Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:09:02.5164026Z Build Operation ID: dfa485f2-5717-4708-816a-8ca90b5aba77
+2025-06-11T06:09:03.6232164Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:09:03.8927790Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:09:04.1827975Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:09:04.1828769Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:09:06.6622751Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:09:06.6622715Z 
+2025-06-11T06:09:06.6623909Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:09:06.6624028Z 
+2025-06-11T06:09:06.6624069Z [Traceback (most recent call last):
+2025-06-11T06:09:06.6624106Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:09:06.6624176Z     return load_entry_point(dist, section, name)
+2025-06-11T06:09:06.6624212Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:09:06.6624249Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:09:06.6624286Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:09:06.6624359Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:09:06.6624409Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:09:06.6624457Z     raise PackageNotFoundError(name)
+2025-06-11T06:09:06.6624502Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:09:06.6624569Z ]
+2025-06-11T06:09:06.6624613Z 
+2025-06-11T06:09:19.0650593Z    _____                               
+2025-06-11T06:09:19.0651264Z   /  _  \ __________ _________   ____  
+2025-06-11T06:09:19.0651350Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:09:19.0651428Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:09:19.0651481Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:09:19.0651549Z         \/      \/                  \/ 
+2025-06-11T06:09:19.0651604Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:09:19.0651654Z 
+2025-06-11T06:09:19.0651799Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:09:19.0651851Z Python 3.9.22
+2025-06-11T06:09:19.0651906Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:09:19.0651964Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:09:19.0652028Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:09:19.6398098Z 3 added, 0 removed; done.
+2025-06-11T06:09:19.6398789Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:09:19.6415215Z done.
+2025-06-11T06:09:19.6458612Z CA certificates copied and updated successfully.
+2025-06-11T06:09:19.6581094Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:09:19.6913977Z Starting periodic command scheduler: cron.
+2025-06-11T06:09:19.6916672Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:09:19.6969884Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:09:19.6970384Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:09:19.6970722Z Build Operation ID: 487262bb-3545-41ea-b90c-5017615883a8
+2025-06-11T06:09:20.8442080Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:09:21.1118895Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:09:21.6527480Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:09:21.6528802Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:09:24.2424288Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:09:24.2424455Z 
+2025-06-11T06:09:24.2425011Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:09:24.2425144Z 
+2025-06-11T06:09:24.2425211Z [Traceback (most recent call last):
+2025-06-11T06:09:24.2425287Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:09:24.2425391Z     return load_entry_point(dist, section, name)
+2025-06-11T06:09:24.2425459Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:09:24.2425531Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:09:24.2425598Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:09:24.2425681Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:09:24.2425741Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:09:24.2425801Z     raise PackageNotFoundError(name)
+2025-06-11T06:09:24.2425860Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:09:24.2425942Z ]
+2025-06-11T06:09:24.2425997Z 
+2025-06-11T06:09:33.4251766Z    _____                               
+2025-06-11T06:09:33.4252277Z   /  _  \ __________ _________   ____  
+2025-06-11T06:09:33.4252361Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:09:33.4252409Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:09:33.4252455Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:09:33.4252535Z         \/      \/                  \/ 
+2025-06-11T06:09:33.4252583Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:09:33.4252630Z 
+2025-06-11T06:09:33.4252679Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:09:33.4252727Z Python 3.9.22
+2025-06-11T06:09:33.4252794Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:09:33.4361364Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:09:33.4431045Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:09:34.6081801Z 3 added, 0 removed; done.
+2025-06-11T06:09:34.6088678Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:09:34.6103065Z done.
+2025-06-11T06:09:34.6138641Z CA certificates copied and updated successfully.
+2025-06-11T06:09:34.6267579Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:09:34.6713633Z Starting periodic command scheduler: cron.
+2025-06-11T06:09:34.6714900Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:09:34.6762343Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:09:34.6763169Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:09:34.6763266Z Build Operation ID: 660b7e36-0749-408a-a26e-25b37bc04645
+2025-06-11T06:09:35.7770183Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:09:36.1267530Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:09:36.3542408Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:09:36.3543163Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:09:38.5835286Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:09:38.5835461Z 
+2025-06-11T06:09:38.5836193Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:09:38.5836308Z 
+2025-06-11T06:09:38.5836344Z [Traceback (most recent call last):
+2025-06-11T06:09:38.5836381Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:09:38.5836448Z     return load_entry_point(dist, section, name)
+2025-06-11T06:09:38.5836492Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:09:38.5836551Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:09:38.5836604Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:09:38.5836675Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:09:38.5836730Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:09:38.5836777Z     raise PackageNotFoundError(name)
+2025-06-11T06:09:38.5836826Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:09:38.5836888Z ]
+2025-06-11T06:09:38.5836936Z 
+2025-06-11T06:09:54.5966940Z    _____                               
+2025-06-11T06:09:54.5968280Z   /  _  \ __________ _________   ____  
+2025-06-11T06:09:54.5968391Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:09:54.5968446Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:09:54.5968500Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:09:54.5968592Z         \/      \/                  \/ 
+2025-06-11T06:09:54.5968647Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:09:54.5968698Z 
+2025-06-11T06:09:54.5968750Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:09:54.5968798Z Python 3.9.22
+2025-06-11T06:09:54.5968867Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:09:54.6020774Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:09:54.6175100Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:09:56.1091765Z 3 added, 0 removed; done.
+2025-06-11T06:09:56.1092857Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:09:56.1107324Z done.
+2025-06-11T06:09:56.1137561Z CA certificates copied and updated successfully.
+2025-06-11T06:09:56.1260893Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:09:56.1693602Z Starting periodic command scheduler: cron.
+2025-06-11T06:09:56.1694550Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:09:56.1735902Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:09:56.1736680Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:09:56.1736804Z Build Operation ID: 301c4e0e-c18e-4a7e-9343-7afe988f440d
+2025-06-11T06:09:57.2715356Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:09:57.5408693Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:09:57.8080118Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:09:57.8081021Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:09:59.9937727Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:09:59.9937792Z 
+2025-06-11T06:09:59.9938515Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:09:59.9938658Z 
+2025-06-11T06:09:59.9938710Z [Traceback (most recent call last):
+2025-06-11T06:09:59.9938763Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:09:59.9938851Z     return load_entry_point(dist, section, name)
+2025-06-11T06:09:59.9938905Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:09:59.9938958Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:09:59.9939008Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:09:59.9939080Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:09:59.9939131Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:09:59.9939179Z     raise PackageNotFoundError(name)
+2025-06-11T06:09:59.9939226Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:09:59.9939291Z ]
+2025-06-11T06:09:59.9939334Z 
+2025-06-11T06:10:09.4561855Z    _____                               
+2025-06-11T06:10:09.4562222Z   /  _  \ __________ _________   ____  
+2025-06-11T06:10:09.4562304Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:10:09.4562341Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:10:09.4562375Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:10:09.4562422Z         \/      \/                  \/ 
+2025-06-11T06:10:09.4562470Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:10:09.4562505Z 
+2025-06-11T06:10:09.4562538Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:10:09.4562567Z Python 3.9.22
+2025-06-11T06:10:09.4562598Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:10:09.4611394Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:10:09.4702788Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:10:10.5858103Z 3 added, 0 removed; done.
+2025-06-11T06:10:10.5859243Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:10:10.5871990Z done.
+2025-06-11T06:10:10.5902723Z CA certificates copied and updated successfully.
+2025-06-11T06:10:10.6027464Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:10:10.6340455Z Starting periodic command scheduler: cron.
+2025-06-11T06:10:10.6344833Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:10:10.6389655Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:10:10.6390464Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:10:10.6390563Z Build Operation ID: 643eab7d-0634-462c-9174-d52b78f1c4de
+2025-06-11T06:10:11.7167526Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:10:12.7827601Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:10:12.7828797Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:10:12.7828884Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:10:14.8062556Z 
+2025-06-11T06:10:14.8063183Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:10:14.8063141Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:10:14.8063338Z 
+2025-06-11T06:10:14.8063402Z [Traceback (most recent call last):
+2025-06-11T06:10:14.8063484Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:10:14.8063568Z     return load_entry_point(dist, section, name)
+2025-06-11T06:10:14.8063633Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:10:14.8063722Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:10:14.8063780Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:10:14.8063847Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:10:14.8063907Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:10:14.8063991Z     raise PackageNotFoundError(name)
+2025-06-11T06:10:14.8064049Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:10:14.8064095Z ]
+2025-06-11T06:10:14.8064138Z 
+2025-06-11T06:10:25.7788128Z    _____                               
+2025-06-11T06:10:25.7788712Z   /  _  \ __________ _________   ____  
+2025-06-11T06:10:25.7788813Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:10:25.7788869Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:10:25.7788922Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:10:25.7789013Z         \/      \/                  \/ 
+2025-06-11T06:10:25.7789077Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:10:25.7789138Z 
+2025-06-11T06:10:25.7789196Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:10:25.7789249Z Python 3.9.22
+2025-06-11T06:10:25.7789321Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:10:25.7816057Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:10:25.7906150Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:10:26.9963688Z 3 added, 0 removed; done.
+2025-06-11T06:10:26.9965069Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:10:26.9980536Z done.
+2025-06-11T06:10:27.0025468Z CA certificates copied and updated successfully.
+2025-06-11T06:10:27.0173413Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:10:27.0644682Z Starting periodic command scheduler: cron.
+2025-06-11T06:10:27.0647123Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:10:27.0698159Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:10:27.0699313Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:10:27.0699414Z Build Operation ID: 1592c932-4217-4fe7-9108-f13c51c9a88a
+2025-06-11T06:10:28.1541889Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:10:28.4194038Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:10:28.7007627Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:10:28.7008365Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:10:31.2177701Z 
+2025-06-11T06:10:31.2177757Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:10:31.2178624Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:10:31.2178793Z 
+2025-06-11T06:10:31.2178851Z [Traceback (most recent call last):
+2025-06-11T06:10:31.2178906Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:10:31.2179005Z     return load_entry_point(dist, section, name)
+2025-06-11T06:10:31.2179060Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:10:31.2179117Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:10:31.2179178Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:10:31.2179250Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:10:31.2179306Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:10:31.2179364Z     raise PackageNotFoundError(name)
+2025-06-11T06:10:31.2179414Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:10:31.2179478Z ]
+2025-06-11T06:10:31.2179527Z 
+2025-06-11T06:10:42.7318171Z    _____                               
+2025-06-11T06:10:42.7318736Z   /  _  \ __________ _________   ____  
+2025-06-11T06:10:42.7318802Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:10:42.7318869Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:10:42.7318906Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:10:42.7318958Z         \/      \/                  \/ 
+2025-06-11T06:10:42.7318991Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:10:42.7319026Z 
+2025-06-11T06:10:42.7319074Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:10:42.7319105Z Python 3.9.22
+2025-06-11T06:10:42.7319136Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:10:42.7354621Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:10:42.7425755Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:10:44.4350362Z 3 added, 0 removed; done.
+2025-06-11T06:10:44.4352020Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:10:44.4392883Z done.
+2025-06-11T06:10:44.4432116Z CA certificates copied and updated successfully.
+2025-06-11T06:10:44.4621578Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:10:44.5257505Z Starting periodic command scheduler: cron.
+2025-06-11T06:10:44.5261513Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:10:44.5331183Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:10:44.5331905Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:10:44.5344035Z Build Operation ID: a07290fc-b886-4fa7-ae12-b744e608a5ae
+2025-06-11T06:10:45.6648722Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:10:45.9364162Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:10:46.2666185Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:10:46.2667088Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:10:48.7764513Z 
+2025-06-11T06:10:48.7764625Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:10:48.7765291Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:10:48.7765698Z 
+2025-06-11T06:10:48.7765769Z [Traceback (most recent call last):
+2025-06-11T06:10:48.7765820Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:10:48.7765906Z     return load_entry_point(dist, section, name)
+2025-06-11T06:10:48.7765961Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:10:48.7766014Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:10:48.7766060Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:10:48.7766126Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:10:48.7766172Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:10:48.7766266Z     raise PackageNotFoundError(name)
+2025-06-11T06:10:48.7766310Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:10:48.7766371Z ]
+2025-06-11T06:10:48.7766415Z 
+2025-06-11T06:11:00.6300566Z    _____                               
+2025-06-11T06:11:00.6301076Z   /  _  \ __________ _________   ____  
+2025-06-11T06:11:00.6301198Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:11:00.6301259Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:11:00.6301314Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:11:00.6301384Z         \/      \/                  \/ 
+2025-06-11T06:11:00.6301440Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:11:00.6301512Z 
+2025-06-11T06:11:00.6301563Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:11:00.6301613Z Python 3.9.22
+2025-06-11T06:11:00.6301665Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:11:00.6502165Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:11:00.6617265Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:11:01.8360656Z 3 added, 0 removed; done.
+2025-06-11T06:11:01.8362832Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:11:01.8377516Z done.
+2025-06-11T06:11:01.8410636Z CA certificates copied and updated successfully.
+2025-06-11T06:11:01.8550468Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:11:01.9151668Z Starting periodic command scheduler: cron.
+2025-06-11T06:11:01.9152935Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:11:01.9200989Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:11:01.9201798Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:11:01.9201913Z Build Operation ID: 2e7ba5d9-4ac8-43da-8a7a-49da26240f61
+2025-06-11T06:11:03.0254056Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:11:03.2879849Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:11:04.0969492Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:11:04.0969915Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:11:05.7012006Z 
+2025-06-11T06:11:05.7012209Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:11:05.7012630Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:11:05.7012760Z 
+2025-06-11T06:11:05.7012815Z [Traceback (most recent call last):
+2025-06-11T06:11:05.7012861Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:11:05.7013011Z     return load_entry_point(dist, section, name)
+2025-06-11T06:11:05.7013060Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:11:05.7013109Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:11:05.7013155Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:11:05.7013221Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:11:05.7013269Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:11:05.7013317Z     raise PackageNotFoundError(name)
+2025-06-11T06:11:05.7013362Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:11:05.7013427Z ]
+2025-06-11T06:11:05.7013505Z 
+2025-06-11T06:11:20.7481817Z    _____                               
+2025-06-11T06:11:20.7482270Z   /  _  \ __________ _________   ____  
+2025-06-11T06:11:20.7482364Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:11:20.7482419Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:11:20.7482496Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:11:20.7482565Z         \/      \/                  \/ 
+2025-06-11T06:11:20.7482616Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:11:20.7482666Z 
+2025-06-11T06:11:20.7482714Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:11:20.7482788Z Python 3.9.22
+2025-06-11T06:11:20.7482836Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:11:20.7557013Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:11:20.7640863Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:11:22.0449936Z 3 added, 0 removed; done.
+2025-06-11T06:11:22.0450323Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:11:22.0814468Z done.
+2025-06-11T06:11:22.0850495Z CA certificates copied and updated successfully.
+2025-06-11T06:11:22.1444464Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:11:22.1965318Z Starting periodic command scheduler: cron.
+2025-06-11T06:11:22.1983613Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:11:22.2161357Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:11:22.2162233Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:11:22.2163037Z Build Operation ID: 44fd6199-1026-4314-81c9-7521dd07f747
+2025-06-11T06:11:23.2778389Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:11:23.5356597Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:11:23.8344433Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:11:23.8345107Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:11:26.3644272Z 
+2025-06-11T06:11:26.3644970Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:11:26.3645097Z 
+2025-06-11T06:11:26.3645136Z [Traceback (most recent call last):
+2025-06-11T06:11:26.3645173Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:11:26.3645242Z     return load_entry_point(dist, section, name)
+2025-06-11T06:11:26.3645278Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:11:26.3645314Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:11:26.3645349Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:11:26.3646103Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:11:26.3646199Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:11:26.3646255Z     raise PackageNotFoundError(name)
+2025-06-11T06:11:26.3646305Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:11:26.3646383Z ]
+2025-06-11T06:11:26.3646428Z 
+2025-06-11T06:11:26.3647059Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:11:40.5668839Z    _____                               
+2025-06-11T06:11:40.5669384Z   /  _  \ __________ _________   ____  
+2025-06-11T06:11:40.5669511Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:11:40.5669567Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:11:40.5669621Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:11:40.5669689Z         \/      \/                  \/ 
+2025-06-11T06:11:40.5669757Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:11:40.5669808Z 
+2025-06-11T06:11:40.5669858Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:11:40.5669904Z Python 3.9.22
+2025-06-11T06:11:40.5669951Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:11:40.5723398Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:11:40.5844921Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:11:42.1019056Z 3 added, 0 removed; done.
+2025-06-11T06:11:42.1020231Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:11:42.1044194Z done.
+2025-06-11T06:11:42.1084067Z CA certificates copied and updated successfully.
+2025-06-11T06:11:42.1306373Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:11:42.2510962Z Starting periodic command scheduler: cron.
+2025-06-11T06:11:42.2522684Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:11:42.5455868Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:11:42.5456600Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:11:42.5457112Z Build Operation ID: 6d544f15-1025-4851-83d3-5be889e56a6e
+2025-06-11T06:11:43.6494918Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:11:43.9073329Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:11:44.1851877Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:11:44.1852710Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:11:46.5782701Z 
+2025-06-11T06:11:46.5783255Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:11:46.5783386Z 
+2025-06-11T06:11:46.5783443Z [Traceback (most recent call last):
+2025-06-11T06:11:46.5783498Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:11:46.5783592Z     return load_entry_point(dist, section, name)
+2025-06-11T06:11:46.5783645Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:11:46.5783703Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:11:46.5783759Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:11:46.5783832Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:11:46.5783890Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:11:46.5783943Z     raise PackageNotFoundError(name)
+2025-06-11T06:11:46.5783996Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:11:46.5784065Z ]
+2025-06-11T06:11:46.5784107Z 
+2025-06-11T06:11:46.5784637Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:11:58.9078899Z    _____                               
+2025-06-11T06:11:58.9079445Z   /  _  \ __________ _________   ____  
+2025-06-11T06:11:58.9079548Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:11:58.9079617Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:11:58.9079706Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:11:58.9079779Z         \/      \/                  \/ 
+2025-06-11T06:11:58.9079837Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:11:58.9079895Z 
+2025-06-11T06:11:58.9079947Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:11:58.9080014Z Python 3.9.22
+2025-06-11T06:11:58.9080064Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:11:58.9170620Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:11:58.9201133Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:12:00.1477156Z 3 added, 0 removed; done.
+2025-06-11T06:12:00.1478214Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:12:00.1487959Z done.
+2025-06-11T06:12:00.1518259Z CA certificates copied and updated successfully.
+2025-06-11T06:12:00.1644666Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:12:00.1989763Z Starting periodic command scheduler: cron.
+2025-06-11T06:12:00.1991334Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:12:00.2038260Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:12:00.2044524Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:12:00.2052599Z Build Operation ID: 7f327f92-7891-4815-b1e1-342a741932a1
+2025-06-11T06:12:01.2614056Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:12:01.5176955Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:12:01.7791179Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:12:01.7791997Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:12:04.1808878Z 
+2025-06-11T06:12:04.1809470Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:12:04.1810154Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:12:04.1812682Z 
+2025-06-11T06:12:04.1813911Z [Traceback (most recent call last):
+2025-06-11T06:12:04.1813978Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:12:04.1814090Z     return load_entry_point(dist, section, name)
+2025-06-11T06:12:04.1814144Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:12:04.1814197Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:12:04.1814246Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:12:04.1814324Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:12:04.1814377Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:12:04.1815428Z     raise PackageNotFoundError(name)
+2025-06-11T06:12:04.1815488Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:12:04.1815569Z ]
+2025-06-11T06:12:04.1815612Z 
+2025-06-11T06:12:14.9591699Z    _____                               
+2025-06-11T06:12:14.9592340Z   /  _  \ __________ _________   ____  
+2025-06-11T06:12:14.9592439Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:12:14.9592512Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:12:14.9592606Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:12:14.9592675Z         \/      \/                  \/ 
+2025-06-11T06:12:14.9592732Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:12:14.9592788Z 
+2025-06-11T06:12:14.9592837Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:12:14.9592907Z Python 3.9.22
+2025-06-11T06:12:14.9592960Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:12:14.9634883Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:12:14.9706227Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:12:16.1423635Z 3 added, 0 removed; done.
+2025-06-11T06:12:16.1426953Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:12:16.1441828Z done.
+2025-06-11T06:12:16.1482516Z CA certificates copied and updated successfully.
+2025-06-11T06:12:16.1710883Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:12:16.2343428Z Starting periodic command scheduler: cron.
+2025-06-11T06:12:16.2355195Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:12:16.2407334Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:12:16.2407897Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:12:16.2407970Z Build Operation ID: 15a98f50-4099-4b9a-a73a-185118f776ea
+2025-06-11T06:12:17.3226069Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:12:17.5910771Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:12:17.9265619Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:12:17.9266484Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:12:20.6528221Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:12:20.6528222Z 
+2025-06-11T06:12:20.6528936Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:12:20.6529077Z 
+2025-06-11T06:12:20.6529140Z [Traceback (most recent call last):
+2025-06-11T06:12:20.6529203Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:12:20.6529305Z     return load_entry_point(dist, section, name)
+2025-06-11T06:12:20.6529365Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:12:20.6529426Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:12:20.6529486Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:12:20.6529560Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:12:20.6529617Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:12:20.6529674Z     raise PackageNotFoundError(name)
+2025-06-11T06:12:20.6529727Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:12:20.6529801Z ]
+2025-06-11T06:12:20.6529849Z 
+2025-06-11T06:12:31.7060842Z    _____                               
+2025-06-11T06:12:31.7061382Z   /  _  \ __________ _________   ____  
+2025-06-11T06:12:31.7061468Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:12:31.7061532Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:12:31.7061592Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:12:31.7061685Z         \/      \/                  \/ 
+2025-06-11T06:12:31.7061742Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:12:31.7061803Z 
+2025-06-11T06:12:31.7061855Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:12:31.7061906Z Python 3.9.22
+2025-06-11T06:12:31.7061979Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:12:31.7101634Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:12:31.7235377Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:12:33.2216943Z 3 added, 0 removed; done.
+2025-06-11T06:12:34.2371999Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:12:34.2372459Z done.
+2025-06-11T06:12:34.2372524Z CA certificates copied and updated successfully.
+2025-06-11T06:12:34.2372636Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:12:34.2372737Z Starting periodic command scheduler: cron.
+2025-06-11T06:12:34.2372809Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:12:34.2372876Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:12:34.2372953Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:12:34.2373008Z Build Operation ID: 9c645d97-1558-447e-8f75-8279b92e3eb8
+2025-06-11T06:12:34.6069777Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:12:34.8826771Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:12:35.2508334Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:12:35.2508989Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:12:37.7511230Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:12:37.7511161Z 
+2025-06-11T06:12:37.7512042Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:12:37.7512183Z 
+2025-06-11T06:12:37.7512236Z [Traceback (most recent call last):
+2025-06-11T06:12:37.7512298Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:12:37.7512398Z     return load_entry_point(dist, section, name)
+2025-06-11T06:12:37.7512453Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:12:37.7512509Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:12:37.7512557Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:12:37.7512618Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:12:37.7512653Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:12:37.7512686Z     raise PackageNotFoundError(name)
+2025-06-11T06:12:37.7512718Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:12:37.7512763Z ]
+2025-06-11T06:12:37.7512791Z 
+2025-06-11T06:12:48.4327152Z    _____                               
+2025-06-11T06:12:48.4327869Z   /  _  \ __________ _________   ____  
+2025-06-11T06:12:48.4327968Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:12:48.4328033Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:12:48.4328110Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:12:48.4328183Z         \/      \/                  \/ 
+2025-06-11T06:12:48.4328259Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:12:48.4328318Z 
+2025-06-11T06:12:48.4328371Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:12:48.4328421Z Python 3.9.22
+2025-06-11T06:12:48.4328474Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:12:48.4378699Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:12:48.4491658Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:12:49.6723079Z 3 added, 0 removed; done.
+2025-06-11T06:12:49.6724509Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:12:49.6741637Z done.
+2025-06-11T06:12:49.6779398Z CA certificates copied and updated successfully.
+2025-06-11T06:12:49.6958318Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:12:49.7472354Z Starting periodic command scheduler: cron.
+2025-06-11T06:12:49.7478182Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:12:49.7543247Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:12:49.7544044Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:12:49.7544192Z Build Operation ID: 497fe14a-05ef-4a61-961a-27f65015aab7
+2025-06-11T06:12:50.8338156Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:12:51.0964477Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:12:51.3677956Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:12:51.3678908Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:12:53.5292111Z 
+2025-06-11T06:12:53.5292320Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:12:53.5292829Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:12:53.5292981Z 
+2025-06-11T06:12:53.5293034Z [Traceback (most recent call last):
+2025-06-11T06:12:53.5293089Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:12:53.5293232Z     return load_entry_point(dist, section, name)
+2025-06-11T06:12:53.5293285Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:12:53.5293339Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:12:53.5293391Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:12:53.5293461Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:12:53.5293509Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:12:53.5293560Z     raise PackageNotFoundError(name)
+2025-06-11T06:12:53.5293610Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:12:53.5293672Z ]
+2025-06-11T06:12:53.5293713Z 
+2025-06-11T06:13:05.3970525Z    _____                               
+2025-06-11T06:13:05.3970989Z   /  _  \ __________ _________   ____  
+2025-06-11T06:13:05.3971074Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:13:05.3971131Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:13:05.3971203Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:13:05.3971267Z         \/      \/                  \/ 
+2025-06-11T06:13:05.3971314Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:13:05.3971363Z 
+2025-06-11T06:13:05.3971414Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:13:05.3971479Z Python 3.9.22
+2025-06-11T06:13:05.3971527Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:13:05.4060382Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:13:05.4141827Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:13:06.6857428Z 3 added, 0 removed; done.
+2025-06-11T06:13:06.6858626Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:13:06.6858776Z done.
+2025-06-11T06:13:06.6858848Z CA certificates copied and updated successfully.
+2025-06-11T06:13:06.6858929Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:13:06.6859046Z Starting periodic command scheduler: cron.
+2025-06-11T06:13:06.6859144Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:13:06.7409619Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:13:06.7410360Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:13:06.7410514Z Build Operation ID: c8f0be87-68fd-4e46-ac18-cc30cfae7293
+2025-06-11T06:13:07.8737578Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:13:08.1382381Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:13:08.4332692Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:13:08.4333264Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:13:10.9120817Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:13:10.9120801Z 
+2025-06-11T06:13:10.9122536Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:13:10.9122725Z 
+2025-06-11T06:13:10.9123216Z [Traceback (most recent call last):
+2025-06-11T06:13:10.9123298Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 82, in load_class
+2025-06-11T06:13:10.9123413Z     return load_entry_point(dist, section, name)
+2025-06-11T06:13:10.9123859Z   File "/opt/python/3.9.22/lib/python3.9/site-packages/gunicorn/util.py", line 60, in load_entry_point
+2025-06-11T06:13:10.9123962Z     dist_obj = importlib_metadata.distribution(distribution)
+2025-06-11T06:13:10.9124019Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 542, in distribution
+2025-06-11T06:13:10.9124105Z     return Distribution.from_name(distribution_name)
+2025-06-11T06:13:10.9124653Z   File "/opt/python/3.9.22/lib/python3.9/importlib/metadata.py", line 196, in from_name
+2025-06-11T06:13:10.9124720Z     raise PackageNotFoundError(name)
+2025-06-11T06:13:10.9124773Z importlib.metadata.PackageNotFoundError: meinheld
+2025-06-11T06:13:10.9124861Z ]
+2025-06-11T06:13:10.9124908Z 
+2025-06-11T06:13:21.0399782Z    _____                               
+2025-06-11T06:13:21.0400286Z   /  _  \ __________ _________   ____  
+2025-06-11T06:13:21.0400387Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-06-11T06:13:21.0400446Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-06-11T06:13:21.0400503Z \____|__  /_____ \____/ |__|    \___  >
+2025-06-11T06:13:21.0400591Z         \/      \/                  \/ 
+2025-06-11T06:13:21.0400643Z A P P   S E R V I C E   O N   L I N U X
+2025-06-11T06:13:21.0400695Z 
+2025-06-11T06:13:21.0400749Z Documentation: http://aka.ms/webapp-linux
+2025-06-11T06:13:21.0400801Z Python 3.9.22
+2025-06-11T06:13:21.0400873Z Note: Any data outside '/home' is not persisted
+2025-06-11T06:13:21.0456470Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-06-11T06:13:21.0585712Z Updating certificates in /etc/ssl/certs...
+2025-06-11T06:13:22.2698260Z 3 added, 0 removed; done.
+2025-06-11T06:13:22.2699304Z Running hooks in /etc/ca-certificates/update.d...
+2025-06-11T06:13:22.2714837Z done.
+2025-06-11T06:13:22.2754091Z CA certificates copied and updated successfully.
+2025-06-11T06:13:22.2913493Z Site's appCommandLine: gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app
+2025-06-11T06:13:24.2892906Z Starting periodic command scheduler: cron.
+2025-06-11T06:13:24.2893489Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn -k egg:meinheld#gunicorn_worker -c /home/site/wwwroot/gunicorn.config.py app.main:app'
+2025-06-11T06:13:24.2893671Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2025-06-11T06:13:24.2893752Z Could not find operation ID in manifest. Generating an operation id...
+2025-06-11T06:13:24.2893823Z Build Operation ID: 12d5efb7-554b-4706-8505-29e7a3368627
+2025-06-11T06:13:24.2894051Z Oryx Version: 0.2.20250505.1, Commit: bec89959884a7663432d6e3c4d36acc30657cb85, ReleaseTagName: 20250505.1
+2025-06-11T06:13:24.2894292Z Writing output script to '/opt/startup/startup.sh'
+2025-06-11T06:13:24.2894374Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2025-06-11T06:13:24.2894445Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2025-06-11T06:13:26.6483351Z 
+2025-06-11T06:13:26.6484220Z {"loglevel": "debug", "workers": 8, "bind": "0.0.0.0:8000", "workers_per_core": 2.0, "host": "0.0.0.0", "port": "8000"}
+2025-06-11T06:13:26.6484445Z Error: class uri 'egg:meinheld#gunicorn_worker' invalid or not found: 
+2025-06-11T06:13:26.6484580Z 
+2025-06-11T06:13:26.6484616Z [Traceback (most recent call last):
+2025-06-11T06:13:26.6484653Z   File "/opt/
